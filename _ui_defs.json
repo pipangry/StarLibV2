@@ -1,0 +1,16 @@
+{
+    "ui_defs": [
+      "ui/starlib2/global.json",
+      "ui/starlib2/style.json",
+      "ui/starlib2/package_screen/screen_template.json",
+      "ui/starlib2/package_screen/screen_common.json",
+      "ui/starlib2/package_button/common_button.json",
+      "ui/starlib2/package_button/button_templates.json",
+      "ui/starlib2/package_button/button_style.json",
+      "ui/starlib2/package_dynamic/common_dynamic.json",
+      "ui/starlib2/package_dynamic/dynamic_sizer.json",
+      "ui/starlib2/package_dynamic/dynamic_structure.json",
+      "ui/starlib2/package_custom/custom_toggles.json",
+      "ui/starlib2/package_custom/common_custom.json"
+    ]
+  }
