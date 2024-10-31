@@ -226,5 +226,24 @@
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
         "layer": 32
+    },
+    "grid_item_template": {
+        "type": "panel",
+        "size": "$GRID_ITEM_size",
+        "$GRID_ITEM_size|default": [
+            "100%",
+            "100%x"
+        ],
+        "controls": [
+            {
+                "root@$GRID_ITEM_root": {
+                    "size": "$GRIM_ITEM_root_size",
+                    "$GRIM_ITEM_root_size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ]
+                }
+            }
+        ]
     }
 }
