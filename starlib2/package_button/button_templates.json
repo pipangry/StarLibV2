@@ -1,0 +1,230 @@
+//=======================================
+//
+//   StarLibV2 by pipa_ngry
+//   Please respect my work, don't pass at yours and use it for its intended purpose.
+//   Thanks =)
+//
+//=======================================
+{
+    "namespace": "starlib_pkg_button_templates",
+    "common_vertical_stack_item": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "$VERTICAL_ITEM_button_control|default": "style.nd_vt",
+        "controls": [
+            {
+                "top_margin": {
+                    "type": "panel",
+                    "size": "$VERTICAL_ITEM_top_margin_size",
+                    "$VERTICAL_ITEM_top_margin_size|default": [
+                        0,
+                        1
+                    ]
+                }
+            },
+            {
+                "button@$VERTICAL_ITEM_button_control": {}
+            },
+            {
+                "bottom_margin": {
+                    "type": "panel",
+                    "size": "$VERTICAL_ITEM_bottom_margin_size",
+                    "$VERTICAL_ITEM_bottom_margin_size|default": [
+                        0,
+                        1
+                    ]
+                }
+            }
+        ]
+    },
+    "bordered_button_template": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$BORDERED_BUTTON_background_control|default": "style.black",
+        "controls": [
+            {
+                "button_background@$BORDERED_BUTTON_background_control": {
+                    "layer": 16
+                }
+            },
+            {
+                "button": {
+                    "type": "panel",
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "controls": "$BORDERED_BUTTON_inner",
+                    "$BORDERED_BUTTON_inner|default": []
+                }
+            }
+        ]
+    },
+    "horizontal_button@starlib_pkg_button_templates.common_vertical_stack_item": {
+        "$VERTICAL_ITEM_button_control": "starlib_pkg_button_templates.horizontal_button_template"
+    },
+    "horizontal_button_template@starlib_pkg_button_templates.bordered_button_template": {
+        "size": "$HORIZONTAL_BUTTON_size",
+        "$HORIZONTAL_BUTTON_size|default": [
+            "100%",
+            32
+        ],
+        "$BORDERED_BUTTON_inner": [
+            {
+                "horizontal_button": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "button_image@starlib_pkg_button_common.button_image": {
+                                "size": [
+                                    "100%y",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "root": {
+                                "type": "panel",
+                                "size": [
+                                    "fill",
+                                    "100%"
+                                ],
+                                "$HORIZONTAL_BUTTON_root_control|default": "starlib_pkg_button_common.common_button",
+                                "$HORIZONTAL_BUTTON_content_control|default": "starlib_pkg_button_common.button_text",
+                                "controls": [
+                                    {
+                                        "root@$HORIZONTAL_BUTTON_root_control": {}
+                                    },
+                                    {
+                                        "content@$HORIZONTAL_BUTTON_content_control": {
+                                            "max_size": [
+                                                "100%",
+                                                "100%"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "cubic_button": {
+        "type": "panel",
+        "size": "$CUBIC_BUTTON_size",
+        "$CUBIC_BUTTON_size|default": [
+            "100%",
+            "100%x"
+        ],
+        "controls": [
+            {
+                "root@starlib_pkg_button_common.common_button": {}
+            },
+            {
+                "content@common_cubic_button_content": {}
+            }
+        ]
+    },
+    "common_cubic_button_content": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "max_size": [
+            "100%",
+            "100%"
+        ],
+        "$CUBIC_BUTTON_text_control|default": "starlib_pkg_button_common.button_text",
+        "controls": [
+            {
+                "image_panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "fill"
+                    ],
+                    "controls": [
+                        {
+                            "button_image@starlib_pkg_button_common.button_image": {
+                                "size": "$CUBIC_BUTTON_image_size",
+                                "$CUBIC_BUTTON_image_size|default": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "button_text@$CUBIC_BUTTON_text_control": {}
+            }
+        ]
+    },
+    "big_button": {
+        "type": "panel",
+        "size": "$BIG_BUTTON_size",
+        "$BIG_BUTTON_size|default": [
+            "100%",
+            "100%x"
+        ],
+        "$BIG_BUTTON_content|default": "starlib_pkg_button_templates.common_big_button_content",
+        "controls": [
+            {
+                "root@starlib_pkg_button_common.common_button": {}
+            },
+            {
+                "image@starlib_pkg_button_common.button_image": {
+                    "size": "$BIG_BUTTON_image_size",
+                    "$BIG_BUTTON_image_size|default": [
+                        "100% - 4px",
+                        "100% - 4px"
+                    ],
+                    "layer": 30
+                }
+            },
+            {
+                "content_panel": {
+                    "type": "panel",
+                    "size": "$BIG_BUTTON_content_size",
+                    "$BIG_BUTTON_content_size|default": [
+                        "100% - 4px",
+                        "100% - 4px"
+                    ],
+                    "controls": [
+                        {
+                            "content@$BIG_BUTTON_content": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "common_big_button_content@starlib_pkg_button_common.button_text": {
+        "$BIG_BUTTON_CONTENT_text_alignment|default": "left",
+        "$BIG_BUTTON_CONTENT_font_type|default": "MinecraftTen",
+        "$BIG_BUTTON_CONTENT_font_scale_factor|default": 1.2,
+        "text_alignment": "$BIG_BUTTON_CONTENT_text_alignment",
+        "font_type": "$BIG_BUTTON_CONTENT_font_type",
+        "font_scale_factor": "$BIG_BUTTON_CONTENT_font_scale_factor",
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "layer": 32
+    }
+}

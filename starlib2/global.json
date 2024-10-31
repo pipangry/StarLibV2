@@ -1,0 +1,158 @@
+//=======================================
+//
+//   StarLibV2 by pipa_ngry
+//   Please respect my work, don't pass at yours and use it for its intended purpose.
+//   Thanks =)
+//
+//=======================================
+{
+    "namespace": "global",
+    "binding": {
+        "type": "panel",
+        "$key|default": "",
+        "visible": false,
+        "enabled": false,
+        "bindings": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#form_button_text - $key) = #form_button_text))",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#form_button_text - $key) = #form_button_text))",
+                "target_property_name": "#enabled"
+            }
+        ]
+    },
+    "reverse_binding": {
+        "type": "panel",
+        "$key|default": "",
+        "visible": true,
+        "enabled": true,
+        "bindings": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#form_button_text - $key) = #form_button_text)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#form_button_text - $key) = #form_button_text)",
+                "target_property_name": "#enabled"
+            }
+        ]
+    },
+    "range_selection_binding": {
+      "type": "panel",
+      "$from|default": "",
+      "$to|default": "",
+      "visible": false,
+      "enabled": false,
+      "bindings": [
+          {
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text",
+              "binding_type": "collection"
+          },
+          {
+              "binding_type": "view",
+              "source_property_name": "(((('%.' + $to + 's') * #form_button_text) - (('%.' + $from + 's') * #form_button_text)) - '\t')",
+              "target_property_name": "#text"
+          },
+          {
+              "source_property_name": "(not(#text = ''))",
+              "binding_type": "view",
+              "target_property_name": "#visible"
+          }
+      ]
+   },
+    "scrolling_panel@common.scrolling_panel": {
+        "$scroll_bar_contained": false,
+        "$scroll_bar_left_padding_size": [
+          3,
+          0
+        ],
+        "$scroll_bar_right_padding_size": [
+          0,
+          0
+        ],
+        "$scroll_size": [
+          5,
+          "100%"
+        ],
+        "$scroll_view_port_offset": [
+          0,
+          0
+        ],
+        "$scrolling_pane_offset": [
+          0,
+          0
+        ],
+        "$scrolling_pane_size": [
+          "100%",
+          "100%"
+        ],
+        "$show_background": false,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [
+          "100%",
+          "100%"
+        ]
+    },
+    "empty_panel": {
+        "type": "panel",
+        "size": [
+            0,
+            0
+        ]
+    },
+    "button_factory": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+          "100%",
+          "100%c"
+        ],
+        "$factory_item|default": "global.empty_panel",
+        "factory": {
+          "name": "buttons",
+          "control_name": "$factory_item"
+        },
+        "collection_name": "form_buttons",
+        "bindings": [
+            {
+              "binding_name": "#form_button_length",
+              "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+    "grid": {
+        "type": "grid",
+        "$grid_item|default": "global.empty_panel",
+        "grid_item_template": "$grid_item",
+        "grid_rescaling_type": "horizontal",
+        "collection_name": "form_buttons",
+        "size": [
+          "100%",
+          "100%c"
+        ],
+        "bindings": [
+            {
+                "binding_name_override": "#maximum_grid_items",
+                "binding_name": "#form_button_length"
+            }
+        ]
+    }
+}

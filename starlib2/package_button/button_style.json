@@ -1,0 +1,137 @@
+//=======================================
+//
+//   StarLibV2 by pipa_ngry
+//   Please respect my work, don't pass at yours and use it for its intended purpose.
+//   Thanks =)
+//
+//=======================================
+{
+    "namespace": "starlib_pkg_button_style",
+    "common_button_style": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$BUTTON_STYLE_default|default": "starlib_pkg_button_style.button_style_template",
+        "$BUTTON_STYLE_default_texture|default": "textures/ui/Black",
+        "controls": "$BUTTON_STYLE_variables",
+        "$BUTTON_STYLE_variables|default": [
+            {
+                "default_default@$BUTTON_STYLE_default": {
+                    "texture": "$BUTTON_STYLE_default_texture"
+                }
+            }
+        ]
+    },
+    "button_style_template@style.image": {
+        "bindings": "$bindings",
+        "$bindings|default": [],
+        "layer": 24
+    },
+    "style_variable@starlib_pkg_button_style.button_style_template": {
+        "$key|default": "",
+        "$bindings": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#form_button_text - $key) = #form_button_text))",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#form_button_text - $key) = #form_button_text))",
+                "target_property_name": "#enabled"
+            }
+        ]
+    },
+    "reverse_style_variable@starlib_pkg_button_style.button_style_template": {
+        "$key|default": "",
+        "$bindings": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#form_button_text - $key) = #form_button_text)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#form_button_text - $key) = #form_button_text)",
+                "target_property_name": "#enabled"
+            }
+        ]
+    },
+    "disabled_variable_button_style@starlib_pkg_button_style.common_button_style": {
+        "$BUTTON_STYLE_disabled_variable_key|default": "",
+        "$BUTTON_STYLE_variables": [
+            {
+                "default": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "bindings": "$bindings",
+                    "$bindings": [
+                        {
+                            "binding_collection_name": "form_buttons",
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#form_button_text - $BUTTON_STYLE_disabled_variable_key) = #form_button_text)",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#form_button_text - $BUTTON_STYLE_disabled_variable_key) = #form_button_text)",
+                            "target_property_name": "#enabled"
+                        }
+                    ],
+                    "controls": "$BUTTON_STYLE_default_variable_controls",
+                    "$BUTTON_STYLE_default_variable_controls|default": [],
+                    "layer": 24
+                }
+            },
+            {
+                "disabled": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "bindings": "$bindings",
+                    "$bindings": [
+                        {
+                            "binding_collection_name": "form_buttons",
+                            "binding_name": "#form_button_text",
+                            "binding_type": "collection"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not((#form_button_text - $BUTTON_STYLE_disabled_variable_key) = #form_button_text))",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not((#form_button_text - $BUTTON_STYLE_disabled_variable_key) = #form_button_text))",
+                            "target_property_name": "#enabled"
+                        }
+                    ],
+                    "controls": "$BUTTON_STYLE_disabled_variable_controls",
+                    "$BUTTON_STYLE_disabled_variable_controls|default": [],
+                    "layer": 24
+                }
+            }
+        ]
+    }
+}

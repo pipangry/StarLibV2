@@ -1,0 +1,83 @@
+//=======================================
+//
+//   StarLibV2 by pipa_ngry
+//   Please respect my work, don't pass at yours and use it for its intended purpose.
+//   Thanks =)
+//
+//=======================================
+{
+    "namespace": "starlib_pkg_dynamic_common",
+    "common_dynamic_header": {
+        "type": "panel",
+        "size": "$DYNAMIC_HEADER_size",
+        "$DYNAMIC_HEADER_size|default": [
+            "100%",
+            24
+        ],
+        "$DYNAMIC_HEADER_background_control|default": "style.black",
+        "controls": [
+            {
+                "root": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": "$DYNAMIC_HEADER_root_size",
+                    "$DYNAMIC_HEADER_root_size|default": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "$DYNAMIC_HEADER_header_contents_control|default": "global.empty_panel",
+                    "$DYNAMIC_HEADER_style_control|default": "style.black_alpha",
+                    "$DYNAMIC_HEADER_close_button_control|default": "starlib_pkg_dynamic_common.common_dynamic_header_close_button",
+                    "controls": [
+                        {
+                            "header_contents@$DYNAMIC_HEADER_header_contents_control": {}
+                        },
+                        {
+                            "titleline": {
+                                "type": "panel",
+                                "size": [
+                                    "fill",
+                                    "100%"
+                                ],
+                                "$DYNAMIC_HEADER_title_control|default": "starlib_pkg_screen_common.title_template",
+                                "controls": [
+                                    {
+                                        "header_style@$DYNAMIC_HEADER_style_control": {
+                                            "layer": 16
+                                        }
+                                    },
+                                    {
+                                        "title@$DYNAMIC_HEADER_title_control": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "padding": {
+                                "type": "panel",
+                                "size": [
+                                    1,
+                                    0
+                                ]
+                            }
+                        },
+                        {
+                            "close_button@$DYNAMIC_HEADER_close_button_control": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "background@$DYNAMIC_HEADER_background_control": {
+                    "layer": 12
+                }
+            }
+        ]
+    },
+    "common_dynamic_header_close_button@starlib_pkg_screen_common.close_button_template": {
+        "size": [
+            "100%y",
+            "100%"
+        ]
+    }
+}
