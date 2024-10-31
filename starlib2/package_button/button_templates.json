@@ -234,9 +234,10 @@
             "100%",
             "100%x"
         ],
+        "$GRID_ITEM_root_control|default": "global.empty_panel",
         "controls": [
             {
-                "root@$GRID_ITEM_root": {
+                "root@$GRID_ITEM_root_control": {
                     "size": "$GRIM_ITEM_root_size",
                     "$GRIM_ITEM_root_size": [
                         "100% - 2px",
