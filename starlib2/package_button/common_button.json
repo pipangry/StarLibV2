@@ -36,6 +36,40 @@
             }
         ]
     },
+    "sensible_button@common.button": {
+        "$pressed_button_name": "button.form_button_click",
+        "size": [
+          "100%",
+          "100%"
+        ],
+        "$SENSIBLE_BUTTON_default_control|default": "global.empty_panel",
+        "$SENSIBLE_BUTTON_hover_control|default": "global.empty_panel",
+        "$SENSIBLE_BUTTON_pressed_control|default": "$SENSIBLE_BUTTON_hover_control",
+        "bindings": "$SENSIBLE_BUTTON_bindings",
+        "$SENSIBLE_BUTTON_bindings|default": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_type": "collection_details"
+            }
+        ],
+        "controls": [
+            {
+                "default@$SENSIBLE_BUTTON_default_control": {}
+            },
+            {
+                "hover@$SENSIBLE_BUTTON_hover_control": {
+                    "size": "$SENSIBLE_BUTTON_hover_size",
+                    "$SENSIBLE_BUTTON_hover_size|default": [
+                        "100% + 2px",
+                        "100% + 2px"
+                    ]
+                }
+            },
+            {
+                "pressed@$SENSIBLE_BUTTON_pressed_control": {}
+            }
+        ]
+    },
     "common_button": {
         "type": "panel",
         "size": [

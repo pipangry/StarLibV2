@@ -242,7 +242,9 @@
                     "$GRIM_ITEM_root_size": [
                         "100% - 2px",
                         "100% - 2px"
-                    ]
+                    ],
+                    "bindings": "$GRID_ITEM_BINDINGS",
+                    "$GRID_ITEM_BINDINGS|default": []
                 }
             }
         ]
