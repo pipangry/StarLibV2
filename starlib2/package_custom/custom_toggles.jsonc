@@ -1,0 +1,52 @@
+//=======================================
+//
+//   StarLibV2 by pipa_ngry
+//   Please respect my work, don't pass at yours and use it for its intended purpose.
+//   Thanks =)
+//
+//=======================================
+{
+    "namespace": "starlib_pkg_custom_toggles",
+    "common_toggle": {
+        "type": "panel",
+        "size": "$COMMON_TOGGLE_size",
+        "$COMMON_TOGGLE_size|default": [
+            "100%",
+            24
+        ],
+        "$COMMON_TOGGLE_toggle_text|default": "",
+        "$COMMON_TOGGLE_enable_radio|default": true,
+        "$COMMON_TOGGLE_toggle_name|default": "common_toggle",
+        "$COMMON_TOGGLE_toggle_index|default": 0,
+        "$COMMON_TOGGLE_default_state|default": 1,
+        "controls": [
+            {
+                "toggle_panel@common_toggles.light_text_toggle": {
+                    "$default_border_visible": false,
+                    "$hover_border_visible": false,
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "$toggle_name": "common_toggle",
+                    "$button_text": "$COMMON_TOGGLE_toggle_text",
+                    "$toggle_view_binding_name": "$COMMON_TOGGLE_toggle_name",
+                    "$radio_toggle_group": "$COMMON_TOGGLE_enable_radio",
+                    "$toggle_group_default_selected": "$COMMON_TOGGLE_default_state",
+                    "$toggle_group_forced_index": "$COMMON_TOGGLE_toggle_index"
+                }
+            }
+        ]
+    },
+    "tab_view_binding": {
+        "$toggle_name|default": "common_toggle",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$toggle_name",
+                "source_property_name": "#toggle_state",
+                "target_property_name": "#visible"
+            }
+        ]
+    }
+}

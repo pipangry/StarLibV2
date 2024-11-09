@@ -1,0 +1,25 @@
+//=======================================
+//
+//   StarLibV2 by pipa_ngry
+//   Please respect my work, don't pass at yours and use it for its intended purpose.
+//   Thanks =)
+//
+//=======================================
+{
+    "namespace": "starlib_pkg_custom_edit_box",
+    "common_search_box@common.text_edit_box": {
+        "size": "$COMMON_SEARCH_BOX_size",
+        "$COMMON_SEARCH_BOX_size|default": [
+            "100%",
+            32
+        ],
+        "$COMMON_SEARCH_BOX_place_holder_text|default": "Search",
+        "$COMMON_SEARCH_BOX_name|default": "search_field",
+        "$text_box_name": "$COMMON_SEARCH_BOX_name",
+        "$text_edit_text_control": "$COMMON_SEARCH_BOX_name",
+        "$place_holder_text": "$COMMON_SEARCH_BOX_place_holder_text",
+        "$COMMON_SEARCH_BOX_clear_button_enabled|default": false,
+        "$text_edit_box_clear_to_button_id": "$COMMON_SEARCH_BOX_clear_button_control",
+        "$COMMON_SEARCH_BOX_clear_button_control|default": "button.search_bar_clear"
+    }
+}

@@ -1,0 +1,249 @@
+//=======================================
+//
+//   StarLibV2 by pipa_ngry
+//   Please respect my work, don't pass at yours and use it for its intended purpose.
+//   Thanks =)
+//
+//=======================================
+{
+    "namespace": "starlib_pkg_screen_template",
+    "screen": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$SCREEN_TEMPLATE_fade_control|default": "style.fade",
+        "$SCREEN_TEMPLATE_frame_control|default": "style.white_frame",
+        "controls": [
+            {
+                "fade@$SCREEN_TEMPLATE_fade_control": {
+                    "$fade_enabled|default": false,
+                    "visible": "$fade_enabled",
+                    "size": [
+                        "200%",
+                        "200%"
+                    ],
+                    "alpha": "$fade_alpha",
+                    "$fade_alpha|default": 0.3
+                }
+            },
+            {
+                "screen": {
+                    "type": "panel",
+                    "size": [
+                        "100%cm",
+                        "100%cm"
+                    ],
+                    "max_size": [
+                        "100% - 20px",
+                        "100% - 20px"
+                    ],
+                    "controls": [
+                        {
+                            "forms_holder": {
+                                "type": "panel",
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
+                                "controls": "$forms_holder_controls",
+                                "$forms_holder_controls|default": [
+                                    {
+                                        "main@starlib_pkg_screen_template.form_template": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "frame@$SCREEN_TEMPLATE_frame_control": {
+                                "$frame_enabled|default": false,
+                                "visible": "$frame_enabled",
+                                "size": [
+                                    "100%sm + 2px",
+                                    "100%sm + 2px"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "form_template": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": "$screen_size",
+        "$screen_size|default": [
+            300,
+            255
+        ],
+        "$SCREEN_TEMPLATE_header_control|default": "starlib_pkg_screen_template.header_template",
+        "$SCREEN_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
+        "$SCREEN_TEMPLATE_sub_content_control|default": "global.empty_panel",
+        "$SCREEN_TEMPLATE_background|default": "style.black_alpha",
+        "$SCREEN_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
+        "controls": [
+            {
+                "header_control@$SCREEN_TEMPLATE_header_control": {}
+            },
+            {
+                "padding@$SCREEN_TEMPLATE_between_contents_padding_control": {
+                    "size": "$SCREEN_TEMPLATE_between_contents_padding_size",
+                    "$SCREEN_TEMPLATE_between_contents_padding_size|default": [
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "root_screen": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "fill"
+                    ],
+                    "controls": [
+                        {
+                            "content@$SCREEN_TEMPLATE_content_control": {
+                                "size": "$SCREEN_TEMPLATE_content_size",
+                                "$SCREEN_TEMPLATE_content_size|default": [
+                                    "100% - 8px",
+                                    "100% - 8px"
+                                ]
+                            }
+                        },
+                        {
+                            "background@$SCREEN_TEMPLATE_background": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "sub_content_control@$SCREEN_TEMPLATE_sub_content_control": {}
+            }
+        ]
+    },
+    "header_template": {
+        "type": "panel",
+        "size": "$HEADER_TEMPLATE_size",
+        "$HEADER_TEMPLATE_size|default": [
+            "100%",
+            24
+        ],
+        "$HEADER_TEMPLATE_style_control|default": "style.black",
+        "$HEADER_TEMPLATE_title_control|default": "starlib_pkg_screen_common.title_template",
+        "$HEADER_TEMPLATE_close_button_control|default": "starlib_pkg_screen_template.close_button",
+        "controls": [
+            {
+                "style_control@$HEADER_TEMPLATE_style_control": {}
+            },
+            {
+                "title_control@$HEADER_TEMPLATE_title_control": {}
+            },
+            {
+                "close_button_control@$HEADER_TEMPLATE_close_button_control": {}
+            }
+        ]
+    },
+    "close_button@starlib_pkg_screen_common.close_button_template": {
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "offset": [
+            -5,
+            0
+        ]
+    },
+    "content_template": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$scrolling_content|default": "starlib_pkg_screen_template.scrolling_content_template",
+        "controls": [
+            {
+                "scrolling_panel@global.scrolling_panel": {}
+            }
+        ]
+    },
+    "scrolling_content_template": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "$SCROLLING_CONTENT_form_text_control|default": "starlib_pkg_screen_common.form_text_template",
+        "$button_item_control|default": "style.nd_b",
+        "controls": [
+            {
+                "form_text@$SCROLLING_CONTENT_form_text_control": {}
+            },
+            {
+                "additional_content": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
+                    "$SCROLLING_CONTENT_additional_content_margins_size|default": [
+                        0,
+                        0
+                    ],
+                    "controls": [
+                        {
+                            "top_margin": {
+                                "type": "panel",
+                                "size": "$SCROLLING_CONTENT_additional_content_margins_size"
+                            }
+                        },
+                        {
+                            "additional_content_root": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "$SCROLLING_CONTENT_additional_content_root_control|default": "global.empty_panel",
+                                "controls": [
+                                    {
+                                        "additional_content_root@$SCROLLING_CONTENT_additional_content_root_control": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "bottom_margin": {
+                                "type": "panel",
+                                "size": "$SCROLLING_CONTENT_additional_content_margins_size"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "button_factory": {
+                    "type": "stack_panel",
+                    "size": [
+                      "100%",
+                      "100%c"
+                    ],
+                    "orientation": "vertical",
+                    "factory": {
+                      "name": "buttons",
+                      "control_name": "$button_item_control"
+                    },
+                    "collection_name": "form_buttons",
+                    "bindings": [
+                        {
+                            "binding_name": "#form_button_length",
+                            "binding_name_override": "#collection_length"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
