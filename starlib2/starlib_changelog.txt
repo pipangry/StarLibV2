@@ -9,17 +9,8 @@ DO NOT DELETE THIS FILE!
 
 ====================================
 
-Current version: 1.0.2-release
+Current version: 1.0.2.1-release
 Changelogs:
-  1. Added $CUBIC_BUTTON_image_bindings at @starlib_pkg_button_templates.common_cubic_button_content
-  2. Added $HORIZONTAL_BUTTON_image_bindings at @starlib_pkg_button_templates.horizontal_button_template
-  3. Added $BIG_BUTTON_image_bindings at @starlib_pkg_button_templates.big_button
-  4. Added $HORIZONTAL_BUTTON_image_size at @starlib_pkg_button_templates.horizontal_button_template
-  5. Added @starlib_pkg_custom_edit_box.common_search_box
-  6. Added @starlib_pkg_custom_common.search_conditions_element_binding and @starlib_pkg_custom_common.text_range_search_conditions_element_binding as bindings for searchable element.
-  7. Added additional_content at @starlib_pkg_screen_template.scrolling_content_template
-  8. Fixed common label layer
-  9. Added $label_layer at @style.label
-  10. Added default style variables to @starlib_pkg_button_style.-disabled_variable_button_style
-  11. Added @starlib_pkg_dynamic_sizer.common_auto_sizer
-  12. Changed file format to .jsonc
+  1. Added @starlib_pkg_dynamic_common.uncollizeble_content_dynamic_item
+  2. Added side_paddings to @starlib_pkg_dynamic_structure.dynamic_item_with_background
+  3. Added $DYNAMIC_HEADER_right_header_contents_control to @starlib_pkg_dynamic_common.common_dynamic_header

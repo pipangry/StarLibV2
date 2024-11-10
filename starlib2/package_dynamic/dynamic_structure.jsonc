@@ -54,13 +54,53 @@
                     "$DYNAMIC_ITEM_root_control|default": "starlib_pkg_dynamic_structure.dynamic_item_template",
                     "controls": [
                         {
-                            "root@$DYNAMIC_ITEM_root_control": {}
+                            "root": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%cm"
+                                ],
+                                "$DYNAMIC_ITEM_side_paddings_size|default": [
+                                    3,
+                                    0
+                                ],
+                                "controls": [
+                                    {
+                                        "left_padding": {
+                                            "type": "panel",
+                                            "size": "$DYNAMIC_ITEM_side_paddings_size"
+                                        }
+                                    },
+                                    {
+                                        "root_root": {
+                                            "type": "panel",
+                                            "size": [
+                                                "fill",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "root@$DYNAMIC_ITEM_root_control": {}
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "right_padding": {
+                                            "type": "panel",
+                                            "size": "$DYNAMIC_ITEM_side_paddings_size"
+                                        }
+                                    }
+                                ]
+                            }
                         },
                         {
                             "background@style.image": {
-                                "size": [
+                                "size": "$DYNAMIC_ITEM_background_size",
+                                "$DYNAMIC_ITEM_background_size|default": [
                                     "100%",
-                                    "100%sm"
+                                    "100%sm + 4px"
                                 ],
                                 "texture": "$DYNAMIC_ITEM_background_texture",
                                 "$DYNAMIC_ITEM_background_texture|default": "",

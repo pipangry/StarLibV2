@@ -26,6 +26,7 @@
                         "100% - 2px"
                     ],
                     "$DYNAMIC_HEADER_header_contents_control|default": "global.empty_panel",
+                    "$DYNAMIC_HEADER_right_header_contents_control|default": "global.empty_panel",
                     "$DYNAMIC_HEADER_style_control|default": "style.black_alpha",
                     "$DYNAMIC_HEADER_close_button_control|default": "starlib_pkg_dynamic_common.common_dynamic_header_close_button",
                     "controls": [
@@ -53,6 +54,9 @@
                             }
                         },
                         {
+                            "header_contents@$DYNAMIC_HEADER_right_header_contents_control": {}
+                        },
+                        {
                             "padding": {
                                 "type": "panel",
                                 "size": [
@@ -78,6 +82,24 @@
         "size": [
             "100%y",
             "100%"
+        ]
+    },
+    "uncollizeble_content_dynamic_item@starlib_pkg_dynamic_structure.dynamic_item_template": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "$DYNAMIC_ITEM_uncollizeble_content_control|default": "global.empty_panel",
+        "$DYNAMIC_ITEM_collizeble_root_control|default": "global.empty_panel",
+        "controls": [
+            {
+                "uncolilzeble_content@$DYNAMIC_ITEM_uncollizeble_content_control": {}
+            },
+            {
+                "dynamic_item_main@$DYNAMIC_ITEM_collizeble_root_control": {}
+            }
         ]
     }
 }
