@@ -12,7 +12,7 @@
         "orientation": "horizontal",
         "size": [
             "100%",
-            "100%c"
+            "100%cm"
         ],
         "$BUTTON_SIZER_third_output|default": "global.empty_panel",
         "controls": [
@@ -51,7 +51,7 @@
         "orientation": "horizontal",
         "size": [
             "100%",
-            "100%c"
+            "100%cm"
         ],
         "$BUTTON_SIZER_half_output|default": "global.empty_panel",
         "controls": [
@@ -88,7 +88,8 @@
     "custom_sizer_template": {
         "type": "stack_panel",
         "orientation": "horizontal",
-        "size": [
+        "size": "$BUTTON_SIZER_custom_panel_size",
+        "$BUTTON_SIZER_custom_panel_size|default": [
             "100%",
             "100%cm"
         ],
@@ -107,7 +108,8 @@
             },
             {
                 "output@$BUTTON_SIZER_custom_output": {
-                    "size": [
+                    "size": "$BUTTON_SIZER_custom_output_size",
+                    "$BUTTON_SIZER_custom_output_size|default": [
                         "fill",
                         "100%c"
                     ]

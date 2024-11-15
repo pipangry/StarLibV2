@@ -84,7 +84,7 @@
             "100%"
         ]
     },
-    "uncollizeble_content_dynamic_item@starlib_pkg_dynamic_structure.dynamic_item_template": {
+    "uncollizeble_content_dynamic_item": {
         "type": "stack_panel",
         "orientation": "vertical",
         "size": [

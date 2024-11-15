@@ -9,8 +9,4 @@ DO NOT DELETE THIS FILE!
 
 ====================================
 
-Current version: 1.0.2.1-release
-Changelogs:
-  1. Added @starlib_pkg_dynamic_common.uncollizeble_content_dynamic_item
-  2. Added side_paddings to @starlib_pkg_dynamic_structure.dynamic_item_with_background
-  3. Added $DYNAMIC_HEADER_right_header_contents_control to @starlib_pkg_dynamic_common.common_dynamic_header
+Current version: 1.0.3-release

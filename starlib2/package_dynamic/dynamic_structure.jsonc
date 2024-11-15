@@ -8,7 +8,8 @@
 {
     "namespace": "starlib_pkg_dynamic_structure",
     "dynamic_item_with_background": {
-        "type": "panel",
+        "type": "stack_panel",
+        "orientation": "vertical",
         "size": [
             "100%",
             "100%c"
@@ -59,7 +60,7 @@
                                 "orientation": "horizontal",
                                 "size": [
                                     "100%",
-                                    "100%cm"
+                                    "100%c"
                                 ],
                                 "$DYNAMIC_ITEM_side_paddings_size|default": [
                                     3,
@@ -97,15 +98,30 @@
                         },
                         {
                             "background@style.image": {
-                                "size": "$DYNAMIC_ITEM_background_size",
-                                "$DYNAMIC_ITEM_background_size|default": [
+                                "size": [
                                     "100%",
-                                    "100%sm + 4px"
+                                    "100%sm"
                                 ],
                                 "texture": "$DYNAMIC_ITEM_background_texture",
                                 "$DYNAMIC_ITEM_background_texture|default": "",
                                 "bindings": "$DYNAMIC_ITEM_background_bindings",
-                                "$DYNAMIC_ITEM_background_bindings|default": []
+                                "$DYNAMIC_ITEM_background_bindings|default": [
+                                    {
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_text",
+                                        "binding_type": "collection"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "((#form_button_text - $VERTICAL_PROCESSING_no_height_key) = #form_button_text)",
+                                        "target_property_name": "#visible"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "((#form_button_text - $VERTICAL_PROCESSING_no_height_key) = #form_button_text)",
+                                        "target_property_name": "#enabled"
+                                    }
+                                ]
                             }
                         }
                     ]

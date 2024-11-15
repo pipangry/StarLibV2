@@ -87,15 +87,7 @@
                     ],
                     "controls": [
                         {
-                            "button_image@starlib_pkg_button_common.button_image": {
-                                "size": "$HORIZONTAL_BUTTON_image_size",
-                                "$HORIZONTAL_BUTTON_image_size|default": [
-                                    "100%y",
-                                    "100%"
-                                ],
-                                "bindings": "$HORIZONTAL_BUTTON_image_bindings",
-                                "$HORIZONTAL_BUTTON_image_bindings|default": "$BUTTON_IMAGE_bindings"
-                            }
+                            "image@starlib_pkg_button_templates.horizontal_button_image": {}
                         },
                         {
                             "root": {
@@ -121,6 +113,75 @@
                                 ]
                             }
                         }
+                    ]
+                }
+            }
+        ]
+    },
+    "horizontal_button_image": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": "$HORIZONTAL_BUTTON_image_panel_size",
+        "$HORIZONTAL_BUTTON_image_panel_size|default": [
+            "100%y + 1px",
+            "100%"
+        ],
+        "bindings": "$HORIZONTAL_BUTTON_image_bindings",
+        "$HORIZONTAL_BUTTON_image_bindings|default": [
+            {
+                "binding_name": "#form_button_texture",
+                "binding_name_override": "#texture",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_texture_file_system",
+                "binding_name_override": "#texture_file_system",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#texture = '') or (#texture = 'loading')))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "imame_root": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "image@starlib_pkg_button_common.button_image": {
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "image_background@style.image": {
+                                "texture": "$HORIZONTAL_BUTTON_image_background_texture",
+                                "$HORIZONTAL_BUTTON_image_background_texture|default": "",
+                                "visible": "$HORIZONTAL_BUTTON_enable_image_background",
+                                "$HORIZONTAL_BUTTON_enable_image_background|default": false,
+                                "layer": 30
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "margin": {
+                    "type": "panel",
+                    "size": "$HORIZONTAL_BUTTON_image_margin_size",
+                    "$HORIZONTAL_BUTTON_image_margin_size|default": [
+                        1,
+                        0
                     ]
                 }
             }
