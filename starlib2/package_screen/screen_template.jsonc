@@ -81,7 +81,7 @@
         "$SCREEN_TEMPLATE_header_control|default": "starlib_pkg_screen_template.header_template",
         "$SCREEN_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
         "$SCREEN_TEMPLATE_sub_content_control|default": "global.empty_panel",
-        "$SCREEN_TEMPLATE_background|default": "style.black_alpha",
+        "$SCREEN_TEMPLATE_background_control|default": "style.image",
         "$SCREEN_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
         "controls": [
             {
@@ -114,7 +114,10 @@
                             }
                         },
                         {
-                            "background@$SCREEN_TEMPLATE_background": {}
+                            "background@$SCREEN_TEMPLATE_background_control": {
+                                "texture": "$SCREEN_TEMPLATE_background_texture",
+                                "$SCREEN_TEMPLATE_background_texture|default": ""
+                            }
                         }
                     ]
                 }
