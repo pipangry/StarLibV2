@@ -71,59 +71,83 @@
         ]
     },
     "form_template": {
-        "type": "stack_panel",
-        "orientation": "vertical",
+        "type": "panel",
         "size": "$screen_size",
         "$screen_size|default": [
             300,
             255
         ],
-        "$SCREEN_TEMPLATE_header_control|default": "starlib_pkg_screen_template.header_template",
-        "$SCREEN_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
-        "$SCREEN_TEMPLATE_sub_content_control|default": "global.empty_panel",
-        "$SCREEN_TEMPLATE_background_control|default": "style.image",
-        "$SCREEN_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
         "controls": [
             {
-                "header_control@$SCREEN_TEMPLATE_header_control": {}
-            },
-            {
-                "padding@$SCREEN_TEMPLATE_between_contents_padding_control": {
-                    "size": "$SCREEN_TEMPLATE_between_contents_padding_size",
-                    "$SCREEN_TEMPLATE_between_contents_padding_size|default": [
-                        0,
-                        0
-                    ]
-                }
-            },
-            {
-                "root_screen": {
-                    "type": "panel",
-                    "size": [
+                "root": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": "$SCREEN_TEMPLATE_root_size",
+                    "$SCREEN_TEMPLATE_root_size|default": [
                         "100%",
-                        "fill"
+                        "100%"
                     ],
+                    "$SCREEN_TEMPLATE_header_control|default": "starlib_pkg_screen_template.header_template",
+                    "$SCREEN_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
+                    "$SCREEN_TEMPLATE_sub_content_control|default": "global.empty_panel",
+                    "$SCREEN_TEMPLATE_background_control|default": "style.image",
+                    "$SCREEN_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
                     "controls": [
                         {
-                            "content@$SCREEN_TEMPLATE_content_control": {
-                                "size": "$SCREEN_TEMPLATE_content_size",
-                                "$SCREEN_TEMPLATE_content_size|default": [
-                                    "100% - 8px",
-                                    "100% - 8px"
+                            "header_control@$SCREEN_TEMPLATE_header_control": {}
+                        },
+                        {
+                            "padding@$SCREEN_TEMPLATE_between_contents_padding_control": {
+                                "size": "$SCREEN_TEMPLATE_between_contents_padding_size",
+                                "$SCREEN_TEMPLATE_between_contents_padding_size|default": [
+                                    0,
+                                    0
                                 ]
                             }
                         },
                         {
-                            "background@$SCREEN_TEMPLATE_background_control": {
-                                "texture": "$SCREEN_TEMPLATE_background_texture",
-                                "$SCREEN_TEMPLATE_background_texture|default": ""
+                            "root_screen": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    "fill"
+                                ],
+                                "controls": [
+                                    {
+                                        "content@$SCREEN_TEMPLATE_content_control": {
+                                            "size": "$SCREEN_TEMPLATE_content_size",
+                                            "$SCREEN_TEMPLATE_content_size|default": [
+                                                "100% - 8px",
+                                                "100% - 8px"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "background@$SCREEN_TEMPLATE_background_control": {
+                                            "texture": "$SCREEN_TEMPLATE_background_texture",
+                                            "$SCREEN_TEMPLATE_background_texture|default": ""
+                                        }
+                                    }
+                                ]
                             }
+                        },
+                        {
+                            "sub_content_control@$SCREEN_TEMPLATE_sub_content_control": {}
                         }
                     ]
                 }
             },
             {
-                "sub_content_control@$SCREEN_TEMPLATE_sub_content_control": {}
+                "form_background@style.image": {
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "visible": "$form_background_enabled",
+                    "$form_background_enabled|default": false,
+                    "texture": "$form_background_texture",
+                    "$form_background_texture|default": ""
+                }
             }
         ]
     },
