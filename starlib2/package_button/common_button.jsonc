@@ -36,7 +36,7 @@
             }
         ]
     },
-    "sensible_button_template@common.button": {
+    "sensible_button_panel@common.button": {
         "$pressed_button_name": "button.form_button_click",
         "size": [
           "100%",
