@@ -62,6 +62,7 @@
                         "100% - 2px",
                         "100% - 2px"
                     ],
+                    "$BORDERED_BUTTON_default_control|default": "global.empty_panel",
                     "controls": "$BORDERED_BUTTON_inner",
                     "$BORDERED_BUTTON_inner|default": [
                         {
