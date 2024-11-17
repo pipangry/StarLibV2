@@ -357,6 +357,7 @@
             "100%",
             "100%"
         ],
+        "$HOVER_BUTTON_hover_control|default": "global.empty_panel",
         "controls": [
             {
                 "root@$HOVER_BUTTON_hover_control": {}
