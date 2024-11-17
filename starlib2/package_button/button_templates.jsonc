@@ -43,7 +43,8 @@
     },
     "bordered_button_template": {
         "type": "panel",
-        "size": [
+        "size": "$BORDERED_BUTTON_size",
+        "$BORDERED_BUTTON_size": [
             "100%",
             "100%"
         ],
@@ -62,7 +63,16 @@
                         "100% - 2px"
                     ],
                     "controls": "$BORDERED_BUTTON_inner",
-                    "$BORDERED_BUTTON_inner|default": []
+                    "$BORDERED_BUTTON_inner|default": [
+                        {
+                            "root@$BORDERED_BUTTON_default_control": {
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
                 }
             }
         ]
