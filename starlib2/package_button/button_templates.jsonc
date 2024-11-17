@@ -114,12 +114,7 @@
                                         "root@$HORIZONTAL_BUTTON_root_control": {}
                                     },
                                     {
-                                        "content@$HORIZONTAL_BUTTON_content_control": {
-                                            "max_size": [
-                                                "100%",
-                                                "100%"
-                                            ]
-                                        }
+                                        "content@$HORIZONTAL_BUTTON_content_control": {}
                                     }
                                 ]
                             }
@@ -332,7 +327,11 @@
         "font_scale_factor": "$BIG_BUTTON_CONTENT_font_scale_factor",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
-        "layer": 32
+        "layer": 32,
+        "max_size": [
+            "100%",
+            "100%"
+        ]
     },
     "grid_item_template": {
         "type": "panel",
