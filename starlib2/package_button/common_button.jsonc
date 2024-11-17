@@ -170,5 +170,16 @@
                 "target_property_name": "#visible"
             }
         ]
+    },
+    "hover_text@common.hover_text": {
+        "bindings": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_type": "collection",
+                "binding_name_override": "#hover_text",
+                "binding_name": "#form_button_text"
+            }
+        ],
+        "layer": 255
     }
 }

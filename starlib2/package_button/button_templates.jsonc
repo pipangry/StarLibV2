@@ -326,5 +326,44 @@
                 }
             }
         ]
+    },
+    "hover_button": {
+        "type": "panel",
+        "size": "$HOVER_BUTTON_size",
+        "$HOVER_BUTTON_size|default": [
+            "100%",
+            "100%x"
+        ],
+        "controls": [
+            {
+                "content@starlib_pkg_button_common.button_image": {
+                    "size": "$HOVER_BUTTON_image_size",
+                    "$HOVER_BUTTON_image_size|default": [
+                        "100% - 8px",
+                        "100% - 8px"
+                    ]
+                }
+            },
+            {
+                "root@starlib_pkg_button_common.common_button": {
+                    "$COMMON_BUTTON_hover_control": "starlib_pkg_button_templates.hover_button_hover_root"
+                }
+            }
+        ]
+    },
+    "hover_button_hover_root": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "root@$HOVER_BUTTON_hover_control": {}
+            },
+            {
+                "hover_text@starlib_pkg_button_common.hover_text": {}
+            }
+        ]
     }
 }
