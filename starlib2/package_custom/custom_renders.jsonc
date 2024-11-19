@@ -1,0 +1,115 @@
+{
+    "namespace": "starlib_pkg_custom_renders",
+    "paperdoll_template": {
+        "type": "custom",
+        "renderer": "paper_doll_renderer",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "$PAPERDOLL_size|default": [
+            "100%",
+            "100%"
+        ],
+        "use_selected_skin": "$PAPERDOLL_use_selected_skin",
+        "$PAPERDOLL_use_selected_skin|default": true,
+        "use_uuid": "$PAPERDOLL_use_uuid",
+        "$PAPERDOLL_use_uuid|default": false,
+        "animation_reset_name": "screen_animation_reset",
+        "anims": [
+            "@common.screen_exit_size_animation_push",
+            "@common.screen_exit_size_animation_pop",
+            "@common.screen_entrance_size_animation_push",
+            "@common.screen_entrance_size_animation_pop"
+        ],
+        "rotation": "gesture_x",
+        "bindings": [
+            {
+                "binding_name": "#is_appearance_visible",
+                "binding_name_override": "#visible",
+                "binding_condition": "always"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "#form_text",
+                "target_property_name": "#player_uuid"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "viewer_panel",
+                "source_property_name": "#gesture_delta_source",
+                "target_property_name": "#gesture_delta_source"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "viewer_panel",
+                "source_property_name": "#gesture_mouse_delta_x",
+                "target_property_name": "#gesture_mouse_delta_x"
+            }
+        ]
+    },
+    "doll_rotation_area": {
+        "type": "input_panel",
+        "$ROTATION_AREA_size|default": [
+            "100%",
+            "100%"
+        ],
+        "gesture_tracking_button": "button.turn_doll",
+        "always_handle_controller_direction": true,
+        "tts_ignore_count": true,
+        "button_mappings": [
+            {
+                "button_up_right_of_first_refusal": true,
+                "mapping_type": "pressed",
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.turn_doll"
+            }
+        ],
+        "$ROTATION_AREA_root_control|default": "global.empty_panel",
+        "controls": [
+            {
+                "root@$ROTATION_AREA_root_control": {}
+            }
+        ]
+    },
+    "common_paperdoll": {
+        "type": "panel",
+        "size": "$PAPERDOLL_size",
+        "$COMMON_PAPERDOLL_size|default": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "root@starlib_pkg_custom_renders.doll_rotation_area": {
+                    "$ROTATION_AREA_root_control": "starlib_pkg_custom_renders.paperdoll_template",
+                    "$ROTATION_AREA_size|default": [
+                        "100% - 8px",
+                        "100% - 8px"
+                    ]
+                }
+            },
+            {
+                "background@style.image": {
+                    "texture": "$COMMON_PAPERDOLL_background_texture",
+                    "$COMMON_PAPERDOLL_background_texture|default": ""
+                }
+            }
+        ]
+    },
+    "live_render_template": {
+        "type": "custom",
+        "renderer": "player_live_render",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "$LIVE_RENDER_size|default": [
+            "100%",
+            "100%"
+        ],
+        "animation_reset_name": "screen_animation_reset",
+        "anims": [
+            "@common.screen_exit_size_animation_push",
+            "@common.screen_exit_size_animation_pop",
+            "@common.screen_entrance_size_animation_push",
+            "@common.screen_entrance_size_animation_pop"
+        ]
+    }
+}
