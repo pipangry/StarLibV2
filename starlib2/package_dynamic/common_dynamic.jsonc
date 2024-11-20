@@ -101,5 +101,153 @@
                 "dynamic_item_main@$DYNAMIC_ITEM_collizeble_root_control": {}
             }
         ]
+    },
+    "common_dynamic_button_content": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$DYNAMIC_CONTENT_image_control|default": "starlib_pkg_button_common.button_image",
+        "$DYNAMIC_CONTENT_text_control|default": "starlib_pkg_button_common.button_text",
+        "controls": [
+            {
+                "padding@global.reverse_binding": {
+                    "$key": "$DYNAMIC_CONTENT_switch_key",
+                    "size": [
+                        "fill",
+                        "fill"
+                    ]
+                }
+            },
+            {
+                "image_panel@global.binding": {
+                    "$key": "$DYNAMIC_CONTENT_switch_key",
+                    "size": [
+                        "100%",
+                        "fill"
+                    ],
+                    "controls": [
+                        {
+                            "image_panel@$DYNAMIC_CONTENT_image_control": {
+                                "size": "$DYNAMIC_CONTENT_image_size",
+                                "$DYNAMIC_CONTENT_image_size|default": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "text_content@$DYNAMIC_CONTENT_text_control": {}
+            },
+            {
+                "padding@global.reverse_binding": {
+                    "$key": "$DYNAMIC_CONTENT_switch_key",
+                    "size": [
+                        "fill",
+                        "fill"
+                    ]
+                }
+            },
+            {
+                "soft_padding": {
+                    "type": "panel",
+                    "size": "$DYNAMIC_CONTENT_soft_padding_size",
+                    "$DYNAMIC_CONTENT_soft_padding_size|default": [
+                        0,
+                        2
+                    ]
+                }
+            }
+        ]
+    },
+    "image_conditions_dynamic_button_content": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$DYNAMIC_CONTENT_image_control|default": "starlib_pkg_button_common.button_image",
+        "$DYNAMIC_CONTENT_text_control|default": "starlib_pkg_button_common.button_text",
+        "$condition_bindings": [
+            {
+                "binding_name": "#form_button_texture",
+                "binding_name_override": "#texture",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_texture_file_system",
+                "binding_name_override": "#texture_file_system",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#texture = '') or (#texture = 'loading')))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "padding": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "fill"
+                    ],
+                    "bindings": "$condition_bindings"
+                }
+            },
+            {
+                "image_panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "fill"
+                    ],
+                    "bindings": "$condition_bindings",
+                    "controls": [
+                        {
+                            "image_panel@$DYNAMIC_CONTENT_image_control": {
+                                "size": "$DYNAMIC_CONTENT_image_size",
+                                "$DYNAMIC_CONTENT_image_size|default": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "text_content@$DYNAMIC_CONTENT_text_control": {}
+            },
+            {
+                "padding": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "fill"
+                    ],
+                    "bindings": "$condition_bindings"
+                }
+            },
+            {
+                "soft_padding": {
+                    "type": "panel",
+                    "size": "$DYNAMIC_CONTENT_soft_padding_size",
+                    "$DYNAMIC_CONTENT_soft_padding_size|default": [
+                        0,
+                        2
+                    ]
+                }
+            }
+        ]
     }
 }
