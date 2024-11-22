@@ -159,17 +159,39 @@
             24
         ],
         "$HEADER_TEMPLATE_style_control|default": "style.black",
-        "$HEADER_TEMPLATE_title_control|default": "starlib_pkg_screen_common.title_template",
-        "$HEADER_TEMPLATE_close_button_control|default": "starlib_pkg_screen_template.close_button",
         "controls": [
             {
                 "style_control@$HEADER_TEMPLATE_style_control": {}
             },
             {
-                "title_control@$HEADER_TEMPLATE_title_control": {}
-            },
-            {
-                "close_button_control@$HEADER_TEMPLATE_close_button_control": {}
+                "header_contents": {
+                    "type": "panel",
+                    "size": "$HEADER_TEMPLATE_contents_size",
+                    "$HEADER_TEMPLATE_contents_size|default": [
+                        "100%",
+                        "100%"
+                    ],
+                    "offset": "$HEADER_TEMPLATE_contents_offset",
+                    "$HEADER_TEMPLATE_contents_offset|default": [
+                        0,
+                        0
+                    ],
+                    "$HEADER_TEMPLATE_title_control|default": "starlib_pkg_screen_common.title_template",
+                    "$HEADER_TEMPLATE_close_button_control|default": "starlib_pkg_screen_template.close_button",
+                    "controls": [
+                        {
+                            "title_control@$HEADER_TEMPLATE_title_control": {
+                                "max_size": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "close_button_control@$HEADER_TEMPLATE_close_button_control": {}
+                        }
+                    ]
+                }
             }
         ]
     },
