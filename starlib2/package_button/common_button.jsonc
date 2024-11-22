@@ -78,12 +78,21 @@
         ],
         "$COMMON_BUTTON_panel_control|default": "starlib_pkg_button_common.common_button_panel",
         "$COMMON_BUTTON_style_control|default": "starlib_pkg_button_style.common_button_style",
+        "$COMMON_BUTTON_content_control|default": "global.empty_panel",
         "controls": [
             {
                 "common_button_panel@$COMMON_BUTTON_panel_control": {}
             },
             {
                 "common_button_style@$COMMON_BUTTON_style_control": {}
+            },
+            {
+                "common_button_content@$COMMON_BUTTON_content_control": {
+                    "max_size": [
+                        "100%",
+                        "100%"
+                    ]
+                }
             }
         ]
     },
