@@ -231,7 +231,7 @@
             "100%c"
         ],
         "$SCROLLING_CONTENT_form_text_control|default": "starlib_pkg_screen_common.form_text_template",
-        "$button_item_control|default": "style.nd_b",
+        "$SCROLLING_CONTENT_main_control|default": "global.button_factory",
         "controls": [
             {
                 "form_text@$SCROLLING_CONTENT_form_text_control": {}
@@ -280,24 +280,9 @@
                 }
             },
             {
-                "button_factory": {
-                    "type": "stack_panel",
-                    "size": [
-                      "100%",
-                      "100%c"
-                    ],
-                    "orientation": "vertical",
-                    "factory": {
-                      "name": "buttons",
-                      "control_name": "$button_item_control"
-                    },
-                    "collection_name": "form_buttons",
-                    "bindings": [
-                        {
-                            "binding_name": "#form_button_length",
-                            "binding_name_override": "#collection_length"
-                        }
-                    ]
+                "main@$SCROLLING_CONTENT_main_control": {
+                    "$factory_item|default": "$button_item_control",
+                    "$button_item_control|default": "style.nd_b"
                 }
             }
         ]
