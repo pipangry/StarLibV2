@@ -94,7 +94,6 @@
             "100%"
         ],
         "$DYNAMIC_CONTENT_image_control|default": "starlib_pkg_button_common.button_image",
-        "$DYNAMIC_CONTENT_text_control|default": "starlib_pkg_button_common.button_text",
         "controls": [
             {
                 "padding@global.reverse_binding": {
@@ -126,7 +125,30 @@
                 }
             },
             {
-                "text_content@$DYNAMIC_CONTENT_text_control": {}
+                "text_content": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
+                    "$DYNAMIC_CONTENT_text_control|default": "starlib_pkg_button_common.button_text",
+                    "controls": [
+                        {
+                            "text_content@$DYNAMIC_CONTENT_text_control": {}
+                        },
+                        {
+                            "soft_padding": {
+                                "type": "panel",
+                                "size": "$DYNAMIC_CONTENT_soft_padding_size",
+                                "$DYNAMIC_CONTENT_soft_padding_size|default": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        }
+                    ]
+                }
             },
             {
                 "padding@global.reverse_binding": {
@@ -134,16 +156,6 @@
                     "size": [
                         "fill",
                         "fill"
-                    ]
-                }
-            },
-            {
-                "soft_padding": {
-                    "type": "panel",
-                    "size": "$DYNAMIC_CONTENT_soft_padding_size",
-                    "$DYNAMIC_CONTENT_soft_padding_size|default": [
-                        0,
-                        2
                     ]
                 }
             }
@@ -157,7 +169,6 @@
             "100%"
         ],
         "$DYNAMIC_CONTENT_image_control|default": "starlib_pkg_button_common.button_image",
-        "$DYNAMIC_CONTENT_text_control|default": "starlib_pkg_button_common.button_text",
         "$DYNAMIC_CONTENT_condition_bindings|default": [
             {
                 "binding_name": "#form_button_texture",
@@ -229,7 +240,30 @@
                 }
             },
             {
-                "text_content@$DYNAMIC_CONTENT_text_control": {}
+                "text_content": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
+                    "$DYNAMIC_CONTENT_text_control|default": "starlib_pkg_button_common.button_text",
+                    "controls": [
+                        {
+                            "text_content@$DYNAMIC_CONTENT_text_control": {}
+                        },
+                        {
+                            "soft_padding": {
+                                "type": "panel",
+                                "size": "$DYNAMIC_CONTENT_soft_padding_size",
+                                "$DYNAMIC_CONTENT_soft_padding_size|default": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        }
+                    ]
+                }
             },
             {
                 "padding": {
@@ -239,16 +273,6 @@
                         "fill"
                     ],
                     "bindings": "$DYNAMIC_CONTENT_reverse_condition_bindings"
-                }
-            },
-            {
-                "soft_padding": {
-                    "type": "panel",
-                    "size": "$DYNAMIC_CONTENT_soft_padding_size",
-                    "$DYNAMIC_CONTENT_soft_padding_size|default": [
-                        0,
-                        2
-                    ]
                 }
             }
         ]
