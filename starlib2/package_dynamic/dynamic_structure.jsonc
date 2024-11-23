@@ -172,6 +172,33 @@
             }
         ]
     },
+    "uncollizeble_content_dynamic_item_template": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "$DYNAMIC_ITEM_uncollizeble_content_control|default": "global.empty_panel",
+        "controls": [
+            {
+                "uncolilzeble_content@$DYNAMIC_ITEM_uncollizeble_content_control": {}
+            },
+            {
+                "padding": {
+                    "type": "panel",
+                    "size": "$DYNAMIC_ITEM_between_contents_padding_size",
+                    "$DYNAMIC_ITEM_between_contents_padding_size|default": [
+                        0,
+                        1
+                    ]
+                }
+            },
+            {
+                "dynamic_item_main@starlib_pkg_dynamic_structure.dynamic_item_template": {}
+            }
+        ]
+    },
     "vertical_processing_panel": {
         "type": "panel",
         "size": [

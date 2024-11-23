@@ -84,24 +84,6 @@
             "100%"
         ]
     },
-    "uncollizeble_content_dynamic_item": {
-        "type": "stack_panel",
-        "orientation": "vertical",
-        "size": [
-            "100%",
-            "100%c"
-        ],
-        "$DYNAMIC_ITEM_uncollizeble_content_control|default": "global.empty_panel",
-        "$DYNAMIC_ITEM_collizeble_root_control|default": "global.empty_panel",
-        "controls": [
-            {
-                "uncolilzeble_content@$DYNAMIC_ITEM_uncollizeble_content_control": {}
-            },
-            {
-                "dynamic_item_main@$DYNAMIC_ITEM_collizeble_root_control": {}
-            }
-        ]
-    },
     "common_dynamic_button_content": {
         "type": "stack_panel",
         "orientation": "vertical",

@@ -182,6 +182,64 @@
         ],
         "$label_layer": 245
     },
+    "reverse_conditions_range_selection_button_text@style.label": {
+        "text": "#text",
+        "$from|default": "",
+        "$to|default": "",
+        "$key|default": "",
+        "bindings": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(((('%.' + $to + 's') * #form_button_text) - (('%.' + $from + 's') * #form_button_text)) - '\t')",
+                "target_property_name": "#text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((not(#text = '')) and ((#form_button_text - $key) = #form_button_text))",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((not(#text = '')) and ((#form_button_text - $key) = #form_button_text))",
+                "target_property_name": "#enabled"
+            }
+        ],
+        "$label_layer": 245
+    },
+    "conditions_range_selection_button_text@style.label": {
+        "text": "#text",
+        "$from|default": "",
+        "$to|default": "",
+        "$key|default": "",
+        "bindings": [
+            {
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(((('%.' + $to + 's') * #form_button_text) - (('%.' + $from + 's') * #form_button_text)) - '\t')",
+                "target_property_name": "#text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((not(#text = '')) and (not((#form_button_text - $key) = #form_button_text)))",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((not(#text = '')) and (not((#form_button_text - $key) = #form_button_text)))",
+                "target_property_name": "#enabled"
+            }
+        ],
+        "$label_layer": 245
+    },
     "hover_text@common.hover_text": {
         "bindings": [
             {
