@@ -97,5 +97,8 @@
     },
     "dme_11@label": {
         "text": "§cGrid item root control not defined."
+    },
+    "dme_12@label": {
+        "text": "§cUncollizeble content control not defined."
     }
 }

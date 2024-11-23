@@ -181,7 +181,7 @@
             "100%",
             "100%c"
         ],
-        "$DYNAMIC_ITEM_uncollizeble_content_control|default": "global.empty_panel",
+        "$DYNAMIC_ITEM_uncollizeble_content_control|default": "style.dme_12",
         "controls": [
             {
                 "uncolilzeble_content@$DYNAMIC_ITEM_uncollizeble_content_control": {}
