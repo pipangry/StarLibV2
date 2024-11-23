@@ -27,7 +27,8 @@
     "button_style_template@style.image": {
         "bindings": "$bindings",
         "$bindings|default": [],
-        "layer": 24
+        "layer": "$layer",
+        "$layer|default": 24
     },
     "style_variable@starlib_pkg_button_style.button_style_template": {
         "$key|default": "",
@@ -105,8 +106,7 @@
                                 "$BUTTON_STYLE_default_variable_texture|default": ""
                             }
                         }
-                    ],
-                    "layer": 24
+                    ]
                 }
             },
             {
@@ -142,8 +142,7 @@
                                 "$BUTTON_STYLE_disabled_variable_texture|default": ""
                             }
                         }
-                    ],
-                    "layer": 24
+                    ]
                 }
             }
         ]
