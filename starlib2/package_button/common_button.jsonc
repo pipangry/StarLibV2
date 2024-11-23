@@ -121,7 +121,7 @@
         ]
     },
     "button_image@style.image": {
-        "layer": 245,
+        "layer": 235,
         "bindings": "$BUTTON_IMAGE_bindings",
         "$BUTTON_IMAGE_bindings|default": [
             {
@@ -156,7 +156,8 @@
                 "source_property_name": "(not(#form_button_text = ''))",
                 "target_property_name": "#visible"
             }
-        ]
+        ],
+        "$label_layer": 245
     },
     "range_selection_button_text@style.label": {
         "text": "#text",
@@ -178,7 +179,8 @@
                 "binding_type": "view",
                 "target_property_name": "#visible"
             }
-        ]
+        ],
+        "$label_layer": 245
     },
     "hover_text@common.hover_text": {
         "bindings": [
