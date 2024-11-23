@@ -174,7 +174,7 @@
             }
         ]
     },
-    "uncollizeble_content_dynamic_item_template": {
+    "uncollizeble_content_dynamic_item": {
         "type": "stack_panel",
         "orientation": "vertical",
         "size": [
