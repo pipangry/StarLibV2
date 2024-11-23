@@ -175,8 +175,6 @@
                             "image_background@style.image": {
                                 "texture": "$HORIZONTAL_BUTTON_image_background_texture",
                                 "$HORIZONTAL_BUTTON_image_background_texture|default": "",
-                                "visible": "$HORIZONTAL_BUTTON_enable_image_background",
-                                "$HORIZONTAL_BUTTON_enable_image_background|default": false,
                                 "layer": 30
                             }
                         }
