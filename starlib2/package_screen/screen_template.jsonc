@@ -18,14 +18,14 @@
         "controls": [
             {
                 "fade@$SCREEN_TEMPLATE_fade_control": {
-                    "$fade_enabled|default": false,
-                    "visible": "$fade_enabled",
+                    "$SCREEN_TEMPLATE_fade_enabled|default": false,
+                    "visible": "$SCREEN_TEMPLATE_fade_enabled",
                     "size": [
                         "200%",
                         "200%"
                     ],
-                    "alpha": "$fade_alpha",
-                    "$fade_alpha|default": 0.3
+                    "alpha": "$SCREEN_TEMPLATE_fade_alpha",
+                    "$SCREEN_TEMPLATE_fade_alpha|default": 0.3
                 }
             },
             {
@@ -57,8 +57,8 @@
                         },
                         {
                             "frame@$SCREEN_TEMPLATE_frame_control": {
-                                "$frame_enabled|default": false,
-                                "visible": "$frame_enabled",
+                                "$SCREEN_TEMPLATE_frame_enabled|default": false,
+                                "visible": "$SCREEN_TEMPLATE_frame_enabled",
                                 "size": [
                                     "100%sm + 2px",
                                     "100%sm + 2px"
@@ -72,8 +72,8 @@
     },
     "form_template": {
         "type": "panel",
-        "size": "$screen_size",
-        "$screen_size|default": [
+        "size": "$form_size",
+        "$form_size|default": [
             300,
             255
         ],
@@ -82,24 +82,24 @@
                 "root": {
                     "type": "stack_panel",
                     "orientation": "vertical",
-                    "size": "$SCREEN_TEMPLATE_root_size",
-                    "$SCREEN_TEMPLATE_root_size|default": [
+                    "size": "$FORM_TEMPLATE_root_size",
+                    "$FORM_TEMPLATE_root_size|default": [
                         "100%",
                         "100%"
                     ],
-                    "$SCREEN_TEMPLATE_header_control|default": "starlib_pkg_screen_template.header_template",
-                    "$SCREEN_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
-                    "$SCREEN_TEMPLATE_sub_content_control|default": "global.empty_panel",
-                    "$SCREEN_TEMPLATE_background_control|default": "style.image",
-                    "$SCREEN_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
+                    "$FORM_TEMPLATE_header_control|default": "starlib_pkg_screen_template.header_template",
+                    "$FORM_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
+                    "$FORM_TEMPLATE_sub_content_control|default": "global.empty_panel",
+                    "$FORM_TEMPLATE_background_control|default": "style.image",
+                    "$FORM_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
                     "controls": [
                         {
-                            "header_control@$SCREEN_TEMPLATE_header_control": {}
+                            "header_control@$FORM_TEMPLATE_header_control": {}
                         },
                         {
-                            "padding@$SCREEN_TEMPLATE_between_contents_padding_control": {
-                                "size": "$SCREEN_TEMPLATE_between_contents_padding_size",
-                                "$SCREEN_TEMPLATE_between_contents_padding_size|default": [
+                            "padding@$FORM_TEMPLATE_between_contents_padding_control": {
+                                "size": "$FORM_TEMPLATE_between_contents_padding_size",
+                                "$FORM_TEMPLATE_between_contents_padding_size|default": [
                                     0,
                                     0
                                 ]
@@ -114,27 +114,28 @@
                                 ],
                                 "controls": [
                                     {
-                                        "content@$SCREEN_TEMPLATE_content_control": {
-                                            "size": "$SCREEN_TEMPLATE_content_size",
-                                            "$SCREEN_TEMPLATE_content_size|default": [
+                                        "content@$FORM_TEMPLATE_content_control": {
+                                            "size": "$FORM_TEMPLATE_content_size",
+                                            "$FORM_TEMPLATE_content_size|default": [
                                                 "100% - 8px",
                                                 "100% - 8px"
                                             ]
                                         }
                                     },
                                     {
-                                        "background@$SCREEN_TEMPLATE_background_control": {
-                                            "texture": "$SCREEN_TEMPLATE_background_texture",
-                                            "$SCREEN_TEMPLATE_background_texture|default": ""
+                                        "background@$FORM_TEMPLATE_background_control": {
+                                            "texture": "$FORM_TEMPLATE_background_texture",
+                                            "$FORM_TEMPLATE_background_texture|default": ""
                                         }
                                     }
                                 ]
                             }
                         },
                         {
-                            "sub_content_control@$SCREEN_TEMPLATE_sub_content_control": {}
+                            "sub_content_control@$FORM_TEMPLATE_sub_content_control": {}
                         }
-                    ]
+                    ],
+                    "layer": 16
                 }
             },
             {
@@ -146,7 +147,8 @@
                     "visible": "$form_background_enabled",
                     "$form_background_enabled|default": false,
                     "texture": "$form_background_texture",
-                    "$form_background_texture|default": ""
+                    "$form_background_texture|default": "",
+                    "layer": 10
                 }
             }
         ]
