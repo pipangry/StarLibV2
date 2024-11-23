@@ -78,32 +78,32 @@
       ]
    },
     "scrolling_panel@common.scrolling_panel": {
-        "$scroll_bar_contained": false,
-        "$scroll_bar_left_padding_size": [
+        "$scroll_bar_contained|default": false,
+        "$scroll_bar_left_padding_size|default": [
           3,
           0
         ],
-        "$scroll_bar_right_padding_size": [
+        "$scroll_bar_right_padding_size|default": [
           0,
           0
         ],
-        "$scroll_size": [
+        "$scroll_size|default": [
           5,
           "100%"
         ],
-        "$scroll_view_port_offset": [
+        "$scroll_view_port_offset|default": [
           0,
           0
         ],
-        "$scrolling_pane_offset": [
+        "$scrolling_pane_offset|default": [
           0,
           0
         ],
-        "$scrolling_pane_size": [
+        "$scrolling_pane_size|default": [
           "100%",
           "100%"
         ],
-        "$show_background": false,
+        "$show_background|default": false,
         "anchor_from": "center",
         "anchor_to": "center",
         "size": [
