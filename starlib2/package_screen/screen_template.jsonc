@@ -119,6 +119,11 @@
                                             "$FORM_TEMPLATE_content_size|default": [
                                                 "100% - 8px",
                                                 "100% - 8px"
+                                            ],
+                                            "offset": "$FORM_TEMPLATE_content_offset",
+                                            "$FORM_TEMPLATE_content_offset|default": [
+                                                0,
+                                                0
                                             ]
                                         }
                                     },
