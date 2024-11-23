@@ -94,17 +94,17 @@
                     "$FORM_TEMPLATE_sub_content_control|default": "global.empty_panel",
                     "$FORM_TEMPLATE_background_control|default": "style.image",
                     "$FORM_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
+                    "$FORM_TEMPLATE_between_contents_padding_size|default": [
+                        0,
+                        0
+                    ],
                     "controls": [
                         {
                             "header_control@$FORM_TEMPLATE_header_control": {}
                         },
                         {
                             "padding@$FORM_TEMPLATE_between_contents_padding_control": {
-                                "size": "$FORM_TEMPLATE_between_contents_padding_size",
-                                "$FORM_TEMPLATE_between_contents_padding_size|default": [
-                                    0,
-                                    0
-                                ]
+                                "size": "$FORM_TEMPLATE_between_contents_padding_size"
                             }
                         },
                         {
@@ -141,10 +141,6 @@
                         {
                             "padding@$FORM_TEMPLATE_between_contents_padding_control": {
                                 "size": "$FORM_TEMPLATE_between_contents_padding_size",
-                                "$FORM_TEMPLATE_between_contents_padding_size|default": [
-                                    0,
-                                    0
-                                ],
                                 "visible": "$FORM_TEMPLATE_appear_sub_contents_padding",
                                 "$FORM_TEMPLATE_appear_sub_contents_padding|default": false
                             }
