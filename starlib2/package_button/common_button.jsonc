@@ -26,12 +26,12 @@
         "controls": [
             {
                 "hover@$COMMON_BUTTON_hover_control": {
-                    "layer": 28
+                    "layer": 225
                 }
             },
             {
                 "pressed@$COMMON_BUTTON_pressed_control": {
-                    "layer": 28
+                    "layer": 225
                 }
             }
         ]
@@ -121,7 +121,7 @@
         ]
     },
     "button_image@style.image": {
-        "layer": 32,
+        "layer": 245,
         "bindings": "$BUTTON_IMAGE_bindings",
         "$BUTTON_IMAGE_bindings|default": [
             {
