@@ -24,24 +24,70 @@
     },
     "close_button_template@common.button": {
         "$pressed_button_name": "button.menu_exit",
-        "size": "$CLOSE_BUTTON_TEMPLATE_size",
-        "$CLOSE_BUTTON_TEMPLATE_size|default": [
+        "size": "$CLOSE_BUTTON_size",
+        "$CLOSE_BUTTON_size|default": [
             15,
             15
         ],
         "layer": 32,
-        "$CLOSE_BUTTON_TEMPLATE_default|default": "style.close_button_default",
-        "$CLOSE_BUTTON_TEMPLATE_hover|default": "style.close_button_hover",
-        "$CLOSE_BUTTON_TEMPLATE_pressed|default": "style.close_button_hover",
+        "$CLOSE_BUTTON_default|default": "style.close_button_default",
+        "$CLOSE_BUTTON_hover|default": "style.close_button_hover",
+        "$CLOSE_BUTTON_pressed|default": "style.close_button_hover",
         "controls": [
             {
-                "default@$CLOSE_BUTTON_TEMPLATE_default": {}
+                "default@$CLOSE_BUTTON_default": {}
             },
             {
-                "hover@$CLOSE_BUTTON_TEMPLATE_hover": {}
+                "hover@$CLOSE_BUTTON_hover": {}
             },
             {
-                "pressed@$CLOSE_BUTTON_TEMPLATE_pressed": {}
+                "pressed@$CLOSE_BUTTON_pressed": {}
+            }
+        ]
+    },
+    "async_close_button_template": {
+        "type": "panel",
+        "size": "$CLOSE_BUTTON_size",
+        "$CLOSE_BUTTON_size|default": [
+            15,
+            15
+        ],
+        "controls": [
+            {
+                "close_button_icon@style.image": {
+                    "texture": "$CLOSE_BUTTON_icon_texture",
+                    "size": "$CLOSE_BUTTON_icon_size",
+                    "$CLOSE_BUTTON_icon_size|default": [
+                        "100%",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "close_button_root": {
+                    "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "$CLOSE_BUTTON_default|default": "style.black",
+                    "controls": [
+                        {
+                            "style@$CLOSE_BUTTON_default": {
+                                "layer": 24
+                            }
+                        },
+                        {
+                            "root@starlib_pkg_screen_common.close_button_template": {
+                                "$CLOSE_BUTTON_size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "$CLOSE_BUTTON_default": "global.empty_panel"
+                            }
+                        }
+                    ]
+                }
             }
         ]
     },
