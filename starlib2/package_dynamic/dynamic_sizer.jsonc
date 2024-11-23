@@ -16,7 +16,7 @@
             "100%",
             "100%cm"
         ],
-        "$BUTTON_SIZER_third_output|default": "global.empty_panel",
+        "$BUTTON_SIZER_third_output|default": "style.dme_06",
         "controls": [
             {
                 "left_padding@global.binding": {
@@ -55,7 +55,7 @@
             "100%",
             "100%cm"
         ],
-        "$BUTTON_SIZER_half_output|default": "global.empty_panel",
+        "$BUTTON_SIZER_half_output|default": "style.dme_07",
         "controls": [
             {
                 "left_padding@global.binding": {
@@ -95,7 +95,7 @@
             "100%",
             "100%cm"
         ],
-        "$BUTTON_SIZER_custom_output|default": "global.empty_panel",
+        "$BUTTON_SIZER_custom_output|default": "style.dme_08",
         "$BUTTON_SIZER_custom_size|default": [
             0,
             0

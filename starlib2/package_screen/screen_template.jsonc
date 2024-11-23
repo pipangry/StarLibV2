@@ -284,7 +284,7 @@
             {
                 "main@$SCROLLING_CONTENT_main_control": {
                     "$factory_item|default": "$button_item_control",
-                    "$button_item_control|default": "style.nd_b"
+                    "$button_item_control|default": "style.dme_01"
                 }
             }
         ]

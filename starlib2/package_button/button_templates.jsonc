@@ -16,7 +16,7 @@
             "100%",
             "100%c"
         ],
-        "$VERTICAL_ITEM_button_control|default": "style.nd_vt",
+        "$VERTICAL_ITEM_button_control|default": "style.dme_09",
         "controls": [
             {
                 "top_margin": {
@@ -64,7 +64,7 @@
                         "100% - 2px",
                         "100% - 2px"
                     ],
-                    "$BORDERED_BUTTON_default_control|default": "global.empty_panel",
+                    "$BORDERED_BUTTON_default_control|default": "style.dme_10",
                     "controls": "$BORDERED_BUTTON_inner",
                     "$BORDERED_BUTTON_inner|default": [
                         {
@@ -342,7 +342,7 @@
             "100%",
             "100%x"
         ],
-        "$GRID_ITEM_root_control|default": "global.empty_panel",
+        "$GRID_ITEM_root_control|default": "style.dme_11",
         "controls": [
             {
                 "root@$GRID_ITEM_root_control": {
@@ -387,7 +387,7 @@
             "100%",
             "100%"
         ],
-        "$HOVER_BUTTON_hover_control|default": "global.empty_panel",
+        "$HOVER_BUTTON_hover_control|default": "style.hightlight",
         "controls": [
             {
                 "root@$HOVER_BUTTON_hover_control": {}

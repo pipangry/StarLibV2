@@ -31,17 +31,17 @@
         "texture": "",
         "layer": 1
     },
+    //=======================================
+    //
+    //   Default StarLibV2 style elements
+    //   All of these use default Minecraft textures
+    //
+    //=======================================
     "close_button_default@image": {
         "texture": "textures/ui/close_button_default_light"
     },
     "close_button_hover@image": {
         "texture": "textures/ui/close_button_hover_light"
-    },
-    "nd_b@label": {
-        "text": "§cButton not defined."
-    },
-    "nd_vt@label": {
-        "text": "§cVertical item root not defined."
     },
     "black_alpha@image": {
         "texture": "textures/ui/Black",
@@ -60,7 +60,42 @@
         "texture": "textures/ui/control_white",
         "alpha": 0.2
     },
-    "nd_et@label": {
-        "text": "§cDynamic entry not defined."
+    //=======================================
+    //
+    //   Debug messages
+    //
+    //=======================================
+    "dme_01@label": {
+        "text": "§cButton factory item not defined."
+    },
+    "dme_02@label": {
+        "text": "§cDynamic item root control not defined."
+    },
+    "dme_03@label": {
+        "text": "§cDynamic item entry element not defined."
+    },
+    "dme_04@label": {
+        "text": "§cCommon button factory item not defined."
+    },
+    "dme_05@label": {
+        "text": "§cCommon button grid item not defined."
+    },
+    "dme_06@label": {
+        "text": "§cThird sizer output not defined."
+    },
+    "dme_07@label": {
+        "text": "§cHalf sizer output not defined."
+    },
+    "dme_08@label": {
+        "text": "§cCustom sizer output not defined."
+    },
+    "dme_09@label": {
+        "text": "§cVertical stack item main control not defined."
+    },
+    "dme_10@label": {
+        "text": "§cBordered button default element annotation not defined."
+    },
+    "dme_11@label": {
+        "text": "§cGrid item root control not defined."
     }
 }

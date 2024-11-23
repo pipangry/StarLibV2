@@ -54,7 +54,7 @@
                         "100%",
                         "100%cm"
                     ],
-                    "$DYNAMIC_ITEM_root_control|default": "starlib_pkg_dynamic_structure.dynamic_item_template",
+                    "$DYNAMIC_ITEM_root_control|default": "style.dme_02",
                     "controls": [
                         {
                             "root": {
@@ -167,7 +167,7 @@
             "100%",
             "100%c"
         ],
-        "$DYNAMIC_ITEM_entry|default": "style.nd_et",
+        "$DYNAMIC_ITEM_entry|default": "style.dme_03",
         "controls": [
             {
                 "entry@$DYNAMIC_ITEM_entry": {}

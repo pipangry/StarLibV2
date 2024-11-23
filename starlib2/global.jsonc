@@ -127,7 +127,7 @@
           "100%",
           "100%c"
         ],
-        "$factory_item|default": "global.empty_panel",
+        "$factory_item|default": "style.dme_04",
         "factory": {
           "name": "buttons",
           "control_name": "$factory_item"
@@ -142,7 +142,7 @@
     },
     "grid": {
         "type": "grid",
-        "$grid_item|default": "global.empty_panel",
+        "$grid_item|default": "style.dme_05",
         "grid_item_template": "$grid_item",
         "grid_rescaling_type": "horizontal",
         "collection_name": "form_buttons",
