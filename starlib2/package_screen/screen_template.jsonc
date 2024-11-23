@@ -139,6 +139,17 @@
                             }
                         },
                         {
+                            "padding@$FORM_TEMPLATE_between_contents_padding_control": {
+                                "size": "$FORM_TEMPLATE_between_contents_padding_size",
+                                "$FORM_TEMPLATE_between_contents_padding_size|default": [
+                                    0,
+                                    0
+                                ],
+                                "visible": "$FORM_TEMPLATE_appear_sub_contents_padding",
+                                "$FORM_TEMPLATE_appear_sub_contents_padding|default": false
+                            }
+                        },
+                        {
                             "sub_content_control@$FORM_TEMPLATE_sub_content_control": {}
                         }
                     ],
