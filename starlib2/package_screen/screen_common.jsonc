@@ -54,6 +54,20 @@
         ],
         "controls": [
             {
+                "close_button_text@style.label": {
+                    "localize": true,
+                    "text": "gui.close",
+                    "font_type": "$CLOSE_BUTTON_text_font_type",
+                    "$CLOSE_BUTTON_text_font_type|default": "MinecraftTen",
+                    "max_size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "visible": "$CLOSE_BUTTON_text_enabled",
+                    "$CLOSE_BUTTON_text_enabled|default": false
+                }
+            },
+            {
                 "close_button_icon@style.image": {
                     "texture": "$CLOSE_BUTTON_icon_texture",
                     "size": "$CLOSE_BUTTON_icon_size",
