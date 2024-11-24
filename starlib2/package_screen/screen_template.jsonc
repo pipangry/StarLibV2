@@ -258,7 +258,15 @@
                 }
             },
             {
-                "scrolling_panel@global.scrolling_panel": {}
+                "scrolling_panel@global.scrolling_panel": {
+                    "size": [
+                        "fill",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "fix@global.empty_panel": {}
             }
         ]
     },
