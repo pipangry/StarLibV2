@@ -69,6 +69,11 @@
                 "binding_type": "view",
                 "source_property_name": "(not((#title_text - $key) = #title_text))",
                 "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not((#title_text - $key) = #title_text))",
+                "target_property_name": "#enabled"
             }
         ]
     },
@@ -86,6 +91,11 @@
                 "binding_type": "view",
                 "source_property_name": "((#title_text - $key) = #title_text)",
                 "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#title_text - $key) = #title_text)",
+                "target_property_name": "#enabled"
             }
         ]
     },
