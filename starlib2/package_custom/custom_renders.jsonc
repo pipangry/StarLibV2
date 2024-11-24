@@ -77,7 +77,8 @@
             {
                 "root@$ROTATION_AREA_root_control": {}
             }
-        ]
+        ],
+        "layer": 245
     },
     "common_paperdoll": {
         "type": "panel",
@@ -99,7 +100,8 @@
             {
                 "background@style.image": {
                     "texture": "$COMMON_PAPERDOLL_background_texture",
-                    "$COMMON_PAPERDOLL_background_texture|default": ""
+                    "$COMMON_PAPERDOLL_background_texture|default": "",
+                    "layer": 235
                 }
             }
         ]
