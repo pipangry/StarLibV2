@@ -60,7 +60,13 @@
                     "$CLOSE_BUTTON_icon_size|default": [
                         "100%",
                         "100%"
-                    ]
+                    ],
+                    "offset": "$CLOSE_BUTTON_icon_offset",
+                    "$CLOSE_BUTTON_icon_offset|default": [
+                        0,
+                        0
+                    ],
+                    "layer": 38
                 }
             },
             {
