@@ -16,6 +16,8 @@
           "100%",
           "100%"
         ],
+        "sound_name": "$COMMON_BUTTON_sound_name",
+        "$COMMON_BUTTON_sound_name|default": "random.click",
         "$COMMON_BUTTON_hover_control|default": "style.hightlight",
         "$COMMON_BUTTON_pressed_control|default": "$COMMON_BUTTON_hover_control",
         "bindings": "$COMMON_BUTTON_bindings",
@@ -44,6 +46,8 @@
           "100%",
           "100%"
         ],
+        "sound_name": "$SENSIBLE_BUTTON_sound_name",
+        "$SENSIBLE_BUTTON_sound_name|default": "random.click",
         "$SENSIBLE_BUTTON_default_control|default": "global.empty_panel",
         "$SENSIBLE_BUTTON_hover_control|default": "global.empty_panel",
         "$SENSIBLE_BUTTON_pressed_control|default": "$SENSIBLE_BUTTON_hover_control",
