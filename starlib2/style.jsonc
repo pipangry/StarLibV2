@@ -100,5 +100,12 @@
     },
     "dme_12@label": {
         "text": "§cUncollizeble content control not defined."
+    },
+    "dme_13@label": {
+        "text": "§cVertical processing output not defined.",
+        "size": [
+            "100%",
+            "100%"
+        ]
     }
 }

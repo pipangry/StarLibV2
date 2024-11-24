@@ -228,7 +228,7 @@
                                 ],
                                 "anchor_from": "top_left",
                                 "anchor_to": "top_left",
-                                "$VERTICAL_PROCESSING_output_control|default": "global.empty_panel",
+                                "$VERTICAL_PROCESSING_output_control|default": "style.dme_13",
                                 "controls": [
                                     {
                                         "button": {
