@@ -69,6 +69,14 @@
                         }
                     ]
                 }
+            },
+            {
+                "screen_background@style.image": {
+                    "texture": "$SCREEN_TEMPLATE_background_texture",
+                    "$SCREEN_TEMPLATE_background_texture|default": "",
+                    "fill": true,
+                    "layer": 4
+                }
             }
         ]
     },
