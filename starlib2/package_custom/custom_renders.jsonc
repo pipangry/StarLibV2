@@ -18,6 +18,11 @@
             "100%",
             "100%"
         ],
+        "offset": "$PAPERDOLL_offset",
+        "$PAPERDOLL_offset|default": [
+            0,
+            0
+        ],
         "use_selected_skin": "$PAPERDOLL_use_selected_skin",
         "$PAPERDOLL_use_selected_skin|default": true,
         "use_uuid": "$PAPERDOLL_use_uuid",
@@ -115,6 +120,11 @@
         "$LIVE_RENDER_size|default": [
             "100%",
             "100%"
+        ],
+        "offset": "$LIVE_RENDER_offset",
+        "$LIVE_RENDER_offset|default": [
+            0,
+            0
         ],
         "animation_reset_name": "screen_animation_reset",
         "anims": [
