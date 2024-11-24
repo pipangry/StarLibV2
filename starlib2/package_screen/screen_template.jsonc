@@ -237,7 +237,6 @@
             "100%",
             "100%"
         ],
-        "$scrolling_content|default": "starlib_pkg_screen_template.scrolling_content_template",
         "$CONTENT_enable_paperdoll|default": false,
         "$CONTENT_paperdoll_control|default": "starlib_pkg_custom_renders.common_paperdoll",
         "controls": [
@@ -259,6 +258,7 @@
             },
             {
                 "scrolling_panel@global.scrolling_panel": {
+                    "$scrolling_content|default": "starlib_pkg_screen_template.scrolling_content_template",
                     "size": [
                         "fill",
                         "100%"
