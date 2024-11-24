@@ -110,7 +110,8 @@
                             "header_control@$FORM_TEMPLATE_header_control": {}
                         },
                         {
-                            "padding@$FORM_TEMPLATE_between_contents_padding_control": {
+                            "padding": {
+                                "type": "panel",
                                 "size": "$FORM_TEMPLATE_between_contents_padding_size",
                                 "visible": "$FORM_TEMPLATE_appear_header_padding",
                                 "$FORM_TEMPLATE_appear_header_padding|default": true
@@ -148,7 +149,8 @@
                             }
                         },
                         {
-                            "padding@$FORM_TEMPLATE_between_contents_padding_control": {
+                            "padding": {
+                                "type": "panel",
                                 "size": "$FORM_TEMPLATE_between_contents_padding_size",
                                 "visible": "$FORM_TEMPLATE_appear_sub_contents_padding",
                                 "$FORM_TEMPLATE_appear_sub_contents_padding|default": false
