@@ -45,7 +45,7 @@
             }
         ]
     },
-    "async_close_button_template": {
+    "async_close_button": {
         "type": "panel",
         "size": "$CLOSE_BUTTON_size",
         "$CLOSE_BUTTON_size|default": [
