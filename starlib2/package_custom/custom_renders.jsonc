@@ -53,7 +53,8 @@
                 "source_property_name": "#gesture_mouse_delta_x",
                 "target_property_name": "#gesture_mouse_delta_x"
             }
-        ]
+        ],
+        "layer": 1
     },
     "doll_rotation_area": {
         "type": "input_panel",
@@ -121,6 +122,32 @@
             "@common.screen_exit_size_animation_pop",
             "@common.screen_entrance_size_animation_push",
             "@common.screen_entrance_size_animation_pop"
+        ],
+        "layer": 245
+    },
+    "common_live_render": {
+        "type": "panel",
+        "size": "$COMMON_LIVERENDER_size",
+        "$COMMON_LIVERENDER_size|default": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "root@starlib_pkg_custom_renders.live_render_template": {
+                    "$LIVE_RENDER_size|default": [
+                        "100% - 8px",
+                        "100% - 8px"
+                    ]
+                }
+            },
+            {
+                "background@style.image": {
+                    "texture": "$COMMON_LIVERENDER_background_texture",
+                    "$COMMON_LIVERENDER_background_texture|default": "",
+                    "layer": 235
+                }
+            }
         ]
     }
 }

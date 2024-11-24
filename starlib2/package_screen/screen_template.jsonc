@@ -231,13 +231,32 @@
         ]
     },
     "content_template": {
-        "type": "panel",
+        "type": "stack_panel",
+        "orientation": "horizontal",
         "size": [
             "100%",
             "100%"
         ],
         "$scrolling_content|default": "starlib_pkg_screen_template.scrolling_content_template",
+        "$CONTENT_enable_paperdoll|default": false,
+        "$CONTENT_paperdoll_control|default": "starlib_pkg_custom_renders.common_paperdoll",
         "controls": [
+            {
+                "paperdoll@$CONTENT_paperdoll_control": {
+                    "visible": "$CONTENT_enable_paperdoll",
+                    "enabled": "$CONTENT_enable_paperdoll"
+                }
+            },
+            {
+                "padding": {
+                    "type": "panel",
+                    "size": "$CONTENT_between_contents_padding_size",
+                    "$CONTENT_between_contents_padding_size|default": [
+                        0,
+                        0
+                    ]
+                }
+            },
             {
                 "scrolling_panel@global.scrolling_panel": {}
             }
