@@ -63,6 +63,11 @@
                         "100%",
                         "100%"
                     ],
+                    "offset": "$CLOSE_BUTTON_text_offset",
+                    "$CLOSE_BUTTON_text_offset|default": [
+                        0,
+                        0
+                    ],
                     "visible": "$CLOSE_BUTTON_text_enabled",
                     "$CLOSE_BUTTON_text_enabled|default": false
                 }
@@ -70,6 +75,7 @@
             {
                 "close_button_icon@style.image": {
                     "texture": "$CLOSE_BUTTON_icon_texture",
+                    "$CLOSE_BUTTON_icon_texture|default": "",
                     "size": "$CLOSE_BUTTON_icon_size",
                     "$CLOSE_BUTTON_icon_size|default": [
                         "100%",
