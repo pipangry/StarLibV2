@@ -305,7 +305,9 @@
                             "source_property_name": "(not((#texture = '') or (#texture = 'loading')))",
                             "target_property_name": "#visible"
                         }
-                    ]
+                    ],
+                    "fill": "$BIG_BUTTON_enable_image_fill",
+                    "$BIG_BUTTON_enable_image_fill|default": false
                 }
             },
             {
