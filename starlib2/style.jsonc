@@ -107,5 +107,8 @@
             "100%",
             "100%"
         ]
+    },
+    "dme_14@label": {
+        "text": "§cScrolling content not defined."
     }
 }

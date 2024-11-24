@@ -149,6 +149,7 @@
           "100%",
           "100%"
         ],
+        "$scrolling_content|default": "style.dme_14",
         "$show_background|default": false,
         "anchor_from": "center",
         "anchor_to": "center",
