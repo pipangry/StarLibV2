@@ -168,6 +168,8 @@
             "100%c"
         ],
         "$DYNAMIC_ITEM_entry|default": "style.dme_03",
+        "bindings": "$DYNAMIC_ITEM_bindings",
+        "$DYNAMIC_ITEM_bindings|default": [],
         "controls": [
             {
                 "entry@$DYNAMIC_ITEM_entry": {}
