@@ -81,7 +81,7 @@
     },
     "common_paperdoll": {
         "type": "panel",
-        "size": "$PAPERDOLL_size",
+        "size": "$COMMON_PAPERDOLL_size",
         "$COMMON_PAPERDOLL_size|default": [
             "100%",
             "100%"
