@@ -212,9 +212,15 @@
     "common_cubic_button_content": {
         "type": "stack_panel",
         "orientation": "vertical",
-        "size": [
+        "size": "$CUBIC_BUTTON_content_size",
+        "$CUBIC_BUTTON_content_size|default": [
             "100%",
             "100%"
+        ],
+        "offset": "$CUBIC_BUTTON_content_offset",
+        "$CUBIC_BUTTON_content_offset|default": [
+            0,
+            0
         ],
         "max_size": [
             "100%",
@@ -267,6 +273,7 @@
             "100%x"
         ],
         "$BIG_BUTTON_content|default": "starlib_pkg_button_templates.common_big_button_content",
+        "$BIG_BUTTON_image_overlap_control|default": "global.empty_panel",
         "controls": [
             {
                 "root@starlib_pkg_button_common.common_button": {}
@@ -278,7 +285,7 @@
                         "100% - 4px",
                         "100% - 4px"
                     ],
-                    "layer": 30,
+                    "layer": 32,
                     "bindings": "$BIG_BUTTON_image_bindings",
                     "$BIG_BUTTON_image_bindings|default": [
                         {
@@ -302,6 +309,16 @@
                 }
             },
             {
+                "image_overlap@$BIG_BUTTON_image_overlap_control": {
+                    "layer": 38,
+                    "size": "$BIG_BUTTON_image_size",
+                    "$BIG_BUTTON_image_size|default": [
+                        "100% - 4px",
+                        "100% - 4px"
+                    ]
+                }
+            },
+            {
                 "content_panel": {
                     "type": "panel",
                     "size": "$BIG_BUTTON_content_size",
@@ -311,7 +328,9 @@
                     ],
                     "controls": [
                         {
-                            "content@$BIG_BUTTON_content": {}
+                            "content@$BIG_BUTTON_content": {
+                                "layer": 42
+                            }
                         }
                     ]
                 }
@@ -327,7 +346,6 @@
         "font_scale_factor": "$BIG_BUTTON_CONTENT_font_scale_factor",
         "anchor_from": "bottom_middle",
         "anchor_to": "bottom_middle",
-        "layer": 32,
         "max_size": [
             "100%",
             "100%"

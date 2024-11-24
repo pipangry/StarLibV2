@@ -93,7 +93,6 @@
                     "$FORM_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
                     "$FORM_TEMPLATE_sub_content_control|default": "global.empty_panel",
                     "$FORM_TEMPLATE_background_control|default": "style.image",
-                    "$FORM_TEMPLATE_between_contents_padding_control|default": "global.empty_panel",
                     "$FORM_TEMPLATE_between_contents_padding_size|default": [
                         0,
                         0
@@ -104,7 +103,9 @@
                         },
                         {
                             "padding@$FORM_TEMPLATE_between_contents_padding_control": {
-                                "size": "$FORM_TEMPLATE_between_contents_padding_size"
+                                "size": "$FORM_TEMPLATE_between_contents_padding_size",
+                                "visible": "$FORM_TEMPLATE_appear_header_padding",
+                                "$FORM_TEMPLATE_appear_header_padding|default": true
                             }
                         },
                         {
