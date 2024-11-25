@@ -101,6 +101,7 @@
                     "$FORM_TEMPLATE_content_control|default": "starlib_pkg_screen_template.content_template",
                     "$FORM_TEMPLATE_sub_content_control|default": "global.empty_panel",
                     "$FORM_TEMPLATE_background_control|default": "style.image",
+                    "$FORM_TEMPLATE_between_contents_padding_texture|default": "",
                     "$FORM_TEMPLATE_between_contents_padding_size|default": [
                         0,
                         0
@@ -110,8 +111,8 @@
                             "header_control@$FORM_TEMPLATE_header_control": {}
                         },
                         {
-                            "padding": {
-                                "type": "panel",
+                            "padding@style.image": {
+                                "texture": "$FORM_TEMPLATE_between_contents_padding_texture",
                                 "size": "$FORM_TEMPLATE_between_contents_padding_size",
                                 "visible": "$FORM_TEMPLATE_appear_header_padding",
                                 "$FORM_TEMPLATE_appear_header_padding|default": true
@@ -149,8 +150,8 @@
                             }
                         },
                         {
-                            "padding": {
-                                "type": "panel",
+                            "padding@style.image": {
+                                "texture": "$FORM_TEMPLATE_between_contents_padding_texture",
                                 "size": "$FORM_TEMPLATE_between_contents_padding_size",
                                 "visible": "$FORM_TEMPLATE_appear_sub_contents_padding",
                                 "$FORM_TEMPLATE_appear_sub_contents_padding|default": false
@@ -169,10 +170,8 @@
                         "100%",
                         "100%"
                     ],
-                    "visible": "$form_background_enabled",
-                    "$form_background_enabled|default": false,
-                    "texture": "$form_background_texture",
-                    "$form_background_texture|default": "",
+                    "texture": "$FORM_TEMPLATE_form_background_texture",
+                    "$FORM_TEMPLATE_form_background_texture|default": "",
                     "layer": 10
                 }
             }
@@ -243,7 +242,9 @@
             {
                 "paperdoll@$CONTENT_paperdoll_control": {
                     "visible": "$CONTENT_enable_paperdoll",
-                    "enabled": "$CONTENT_enable_paperdoll"
+                    "enabled": "$CONTENT_enable_paperdoll",
+                    "bindings": "$CONTENT_paperdoll_bindings",
+                    "$CONTENT_paperdoll_bindings|default": []
                 }
             },
             {

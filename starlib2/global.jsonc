@@ -30,6 +30,12 @@
                 "source_property_name": "(not((#form_button_text - $key) = #form_button_text))",
                 "target_property_name": "#enabled"
             }
+        ],
+        "$control|default": "global.empty_panel",
+        "controls": [
+            {
+                "control@$control": {}
+            }
         ]
     },
     "reverse_binding": {
@@ -53,6 +59,12 @@
                 "source_property_name": "((#form_button_text - $key) = #form_button_text)",
                 "target_property_name": "#enabled"
             }
+        ],
+        "$control|default": "global.empty_panel",
+        "controls": [
+            {
+                "control@$control": {}
+            }
         ]
     },
     "title_binding": {
@@ -75,6 +87,12 @@
                 "source_property_name": "(not((#title_text - $key) = #title_text))",
                 "target_property_name": "#enabled"
             }
+        ],
+        "$control|default": "global.empty_panel",
+        "controls": [
+            {
+                "control@$control": {}
+            }
         ]
     },
     "reverse_title_binding": {
@@ -96,6 +114,12 @@
                 "binding_type": "view",
                 "source_property_name": "((#title_text - $key) = #title_text)",
                 "target_property_name": "#enabled"
+            }
+        ],
+        "$control|default": "global.empty_panel",
+        "controls": [
+            {
+                "control@$control": {}
             }
         ]
     },
