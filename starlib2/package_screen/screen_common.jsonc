@@ -34,7 +34,7 @@
         "$CLOSE_BUTTON_sound_name|default": "random.click",
         "$CLOSE_BUTTON_default_control|default": "style.close_button_default",
         "$CLOSE_BUTTON_hover_control|default": "style.close_button_hover",
-        "$CLOSE_BUTTON_pressed_control|default": "$CLOSE_BUTTON_hover",
+        "$CLOSE_BUTTON_pressed_control|default": "$CLOSE_BUTTON_hover_control",
         "controls": [
             {
                 "default@$CLOSE_BUTTON_default_control": {}
