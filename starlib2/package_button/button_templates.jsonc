@@ -272,8 +272,12 @@
             "100%",
             "100%x"
         ],
-        "$BIG_BUTTON_content|default": "starlib_pkg_button_templates.common_big_button_content",
+        "$BIG_BUTTON_content_control|default": "starlib_pkg_button_templates.common_big_button_content",
         "$BIG_BUTTON_image_overlap_control|default": "global.empty_panel",
+        "$BIG_BUTTON_image_size|default": [
+            "100% - 4px",
+            "100% - 4px"
+        ],
         "controls": [
             {
                 "root@starlib_pkg_button_common.common_button": {}
@@ -281,10 +285,6 @@
             {
                 "image@starlib_pkg_button_common.button_image": {
                     "size": "$BIG_BUTTON_image_size",
-                    "$BIG_BUTTON_image_size|default": [
-                        "100% - 4px",
-                        "100% - 4px"
-                    ],
                     "layer": 32,
                     "bindings": "$BIG_BUTTON_image_bindings",
                     "$BIG_BUTTON_image_bindings|default": [
@@ -313,11 +313,8 @@
             {
                 "image_overlap@$BIG_BUTTON_image_overlap_control": {
                     "layer": 38,
-                    "size": "$BIG_BUTTON_image_size",
-                    "$BIG_BUTTON_image_size|default": [
-                        "100% - 4px",
-                        "100% - 4px"
-                    ]
+                    "size": "$BIG_BUTTON_overlap_size",
+                    "$BIG_BUTTON_overlap_size|default": "$BIG_BUTTON_image_size"
                 }
             },
             {
@@ -330,8 +327,12 @@
                     ],
                     "controls": [
                         {
-                            "content@$BIG_BUTTON_content": {
-                                "layer": 42
+                            "content@$BIG_BUTTON_content_control": {
+                                "layer": 42,
+                                "max_size": [
+                                    "100%",
+                                    "100%"
+                                ]
                             }
                         }
                     ]
@@ -347,11 +348,7 @@
         "font_type": "$BIG_BUTTON_CONTENT_font_type",
         "font_scale_factor": "$BIG_BUTTON_CONTENT_font_scale_factor",
         "anchor_from": "bottom_middle",
-        "anchor_to": "bottom_middle",
-        "max_size": [
-            "100%",
-            "100%"
-        ]
+        "anchor_to": "bottom_middle"
     },
     "grid_item_template": {
         "type": "panel",
@@ -364,8 +361,8 @@
         "controls": [
             {
                 "root@$GRID_ITEM_root_control": {
-                    "size": "$GRIM_ITEM_root_size",
-                    "$GRIM_ITEM_root_size": [
+                    "size": "$GRID_ITEM_root_size",
+                    "$GRID_ITEM_root_size|default": [
                         "100% - 2px",
                         "100% - 2px"
                     ],

@@ -231,43 +231,69 @@
     },
     "content_template": {
         "type": "stack_panel",
-        "orientation": "horizontal",
+        "orientation": "vertical",
         "size": [
             "100%",
             "100%"
         ],
-        "$CONTENT_enable_paperdoll|default": false,
-        "$CONTENT_paperdoll_control|default": "starlib_pkg_custom_renders.common_paperdoll",
+        "$CONTENT_header_content_control|default": "global.empty_panel",
+        "$CONTENT_between_contents_padding_size|default": [
+            0,
+            0
+        ],
         "controls": [
             {
-                "paperdoll@$CONTENT_paperdoll_control": {
-                    "visible": "$CONTENT_enable_paperdoll",
-                    "enabled": "$CONTENT_enable_paperdoll",
-                    "bindings": "$CONTENT_paperdoll_bindings",
-                    "$CONTENT_paperdoll_bindings|default": []
-                }
+                "content_header@$CONTENT_header_content_control": {}
             },
             {
                 "padding": {
                     "type": "panel",
                     "size": "$CONTENT_between_contents_padding_size",
-                    "$CONTENT_between_contents_padding_size|default": [
-                        0,
-                        0
-                    ]
+                    "visible": "$CONTENT_appear_main_contents_padding",
+                    "$CONTENT_appear_main_contents_padding|default": false
                 }
             },
             {
-                "scrolling_panel@global.scrolling_panel": {
-                    "$scrolling_content|default": "starlib_pkg_screen_template.scrolling_content_template",
+                "root_content": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
                     "size": [
-                        "fill",
-                        "100%"
+                        "100%",
+                        "fill"
+                    ],
+                    "$CONTENT_enable_paperdoll|default": false,
+                    "$CONTENT_paperdoll_control|default": "starlib_pkg_custom_renders.common_paperdoll",
+                    "controls": [
+                        {
+                            "paperdoll@$CONTENT_paperdoll_control": {
+                                "visible": "$CONTENT_enable_paperdoll",
+                                "enabled": "$CONTENT_enable_paperdoll",
+                                "bindings": "$CONTENT_paperdoll_bindings",
+                                "$CONTENT_paperdoll_bindings|default": []
+                            }
+                        },
+                        {
+                            "padding": {
+                                "type": "panel",
+                                "size": "$CONTENT_between_contents_padding_size",
+                                "visible": "$CONTENT_appear_root_contents_padding",
+                                "$CONTENT_appear_root_contents_padding|default": true
+                            }
+                        },
+                        {
+                            "scrolling_panel@global.scrolling_panel": {
+                                "$scrolling_content|default": "starlib_pkg_screen_template.scrolling_content_template",
+                                "size": [
+                                    "fill",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "fix@global.empty_panel": {}
+                        }
                     ]
                 }
-            },
-            {
-                "fix@global.empty_panel": {}
             }
         ]
     },

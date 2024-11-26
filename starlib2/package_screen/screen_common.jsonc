@@ -32,18 +32,18 @@
         "layer": 32,
         "sound_name": "$CLOSE_BUTTON_sound_name",
         "$CLOSE_BUTTON_sound_name|default": "random.click",
-        "$CLOSE_BUTTON_default|default": "style.close_button_default",
-        "$CLOSE_BUTTON_hover|default": "style.close_button_hover",
-        "$CLOSE_BUTTON_pressed|default": "style.close_button_hover",
+        "$CLOSE_BUTTON_default_control|default": "style.close_button_default",
+        "$CLOSE_BUTTON_hover_control|default": "style.close_button_hover",
+        "$CLOSE_BUTTON_pressed_control|default": "$CLOSE_BUTTON_hover",
         "controls": [
             {
-                "default@$CLOSE_BUTTON_default": {}
+                "default@$CLOSE_BUTTON_default_control": {}
             },
             {
-                "hover@$CLOSE_BUTTON_hover": {}
+                "hover@$CLOSE_BUTTON_hover_control": {}
             },
             {
-                "pressed@$CLOSE_BUTTON_pressed": {}
+                "pressed@$CLOSE_BUTTON_pressed_control": {}
             }
         ]
     },
@@ -98,7 +98,7 @@
                         "100%",
                         "100%"
                     ],
-                    "$CLOSE_BUTTON_default|default": "style.black",
+                    "$CLOSE_BUTTON_default_control|default": "style.black",
                     "controls": [
                         {
                             "style@$CLOSE_BUTTON_default": {
@@ -111,7 +111,7 @@
                                     "100%",
                                     "100%"
                                 ],
-                                "$CLOSE_BUTTON_default": "global.empty_panel"
+                                "$CLOSE_BUTTON_default_control": "global.empty_panel"
                             }
                         }
                     ]
