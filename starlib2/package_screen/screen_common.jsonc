@@ -101,7 +101,7 @@
                     "$CLOSE_BUTTON_default_control|default": "style.black",
                     "controls": [
                         {
-                            "style@$CLOSE_BUTTON_default": {
+                            "style@$CLOSE_BUTTON_default_control": {
                                 "layer": 24
                             }
                         },
