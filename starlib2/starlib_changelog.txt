@@ -9,41 +9,5 @@ DO NOT DELETE THIS FILE!
 
 ====================================
 
-Current version: 1.0.3-release
-1. Added package_custom/custom_renders.jsonc
-    common_paperdoll
-    common_live_render
-    live_render_template
-    paperdoll_render
-    doll_rotation_area
-2. Changed form_template variables names
-3. Added click sound variable to button panels
-4. Added anync close button
-5. Changed close_button_template variables names
-6. Changed grid_item_template variables names
-7. Added big button image overlap element
-8. Changed big button variables names
-9. Added common_auto_sizer
-10. Added exeptions debug messages (DME)
-11. Added title_binding and reverse_title_binding
-12. Fixed button_style layers
-13. Fixed button panel layers
-14. Added hover_button
-15. Added dynamic button content
-    image_conditions_dynamic_button_content
-    common_dynamic_button_content
-16. Fixed common_dynamic_header
-17. Added new pre-made contents layout in content_template
-    Paperdoll panel
-    Header contents panel
-18. Added form_template form background element
-19. Added screen background element
-20. Added support of custom main content in scrolling_panel_template
-21. Added uncollizeble_content_dynamic_item
-22. Fixed grid_item_template variable
-23. Updated code watermarks
-
-Other:
-> New Website
-> A brand new Documentation
-> 5 NEW examples!
+Current version: 1.0.3.2-release
+1. Fixed starlib_pkg_screen_common.async_close_button
