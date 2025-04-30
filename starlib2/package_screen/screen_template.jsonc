@@ -111,7 +111,7 @@
                             "header_control@$FORM_TEMPLATE_header_control": {}
                         },
                         {
-                            "padding@style.image": {
+                            "padding_top@style.image": {
                                 "texture": "$FORM_TEMPLATE_between_contents_padding_texture",
                                 "size": "$FORM_TEMPLATE_between_contents_padding_size",
                                 "visible": "$FORM_TEMPLATE_appear_header_padding",
@@ -150,7 +150,7 @@
                             }
                         },
                         {
-                            "padding@style.image": {
+                            "padding_bottom@style.image": {
                                 "texture": "$FORM_TEMPLATE_between_contents_padding_texture",
                                 "size": "$FORM_TEMPLATE_between_contents_padding_size",
                                 "visible": "$FORM_TEMPLATE_appear_sub_contents_padding",

@@ -9,5 +9,5 @@ DO NOT DELETE THIS FILE!
 
 ====================================
 
-Current version: 1.0.3.2-release
-1. Fixed starlib_pkg_screen_common.async_close_button
+Current version: 1.0.3.3-release
+1. Fixed Json-UI errors on new versions

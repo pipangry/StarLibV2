@@ -56,7 +56,7 @@
                             }
                         },
                         {
-                            "header_contents@$DYNAMIC_HEADER_right_header_contents_control": {}
+                            "right_header_contents@$DYNAMIC_HEADER_right_header_contents_control": {}
                         },
                         {
                             "padding": {
@@ -96,7 +96,7 @@
         "$DYNAMIC_CONTENT_image_control|default": "starlib_pkg_button_common.button_image",
         "controls": [
             {
-                "padding@global.reverse_binding": {
+                "auto_padding_top@global.reverse_binding": {
                     "$key": "$DYNAMIC_CONTENT_switch_key",
                     "size": [
                         "fill",
@@ -151,7 +151,7 @@
                 }
             },
             {
-                "padding@global.reverse_binding": {
+                "auto_padding_bottom@global.reverse_binding": {
                     "$key": "$DYNAMIC_CONTENT_switch_key",
                     "size": [
                         "fill",
@@ -209,7 +209,7 @@
         ],
         "controls": [
             {
-                "padding": {
+                "auto_padding_top": {
                     "type": "panel",
                     "size": [
                         "fill",
@@ -266,7 +266,7 @@
                 }
             },
             {
-                "padding": {
+                "auto_padding_bottom": {
                     "type": "panel",
                     "size": [
                         "fill",
